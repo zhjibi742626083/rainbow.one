@@ -1,49 +1,84 @@
 /**
  * css for download html
  */
-
-body {
-    font-family: "Microsoft YaHei UI", "serif";
-    font-size: 14px;
+html {
+    font-size: 62.5%
 }
 
-div.top {
+body {
     color: white;
-    background-color: #0d85cb;
-    padding-bottom: 4%;
+    font-family: "Microsoft YaHei UI", "serif";
+    font-size:1rem
+}
+
+div.center {
+    /*color: white;*/
+    /*background-color: #0d85cb;*/
+    /*padding-bottom: 4%;*/
+    text-align: center;
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+div.download-pc {
+    /*color: white;*/
+    /*background-color: #0d85cb;*/
+    /*padding-bottom: 4%;*/
+    text-align: center;
+    width: 395px;
+    margin: auto;
+    position: relative;
 }
 
 div.main {
-    color: white;
-    background-color: #0d85cb;
+    /*background-color: #0d85cb;*/
+    background-image: url("../../img/bg.jpg");
     margin-bottom: 5%;
+    text-align: center;
 }
 
-div.main div.qr, div.qr div p {
-    margin-top: 4%;
-}
-
-div.download-phone div.android {
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-div.download-phone div.ios {
-    margin-bottom: 4%;
-}
-
-div.download-phone a {
-    width: 160px;
-}
+/*div.main div.qr, div.qr div p {*/
+/*margin-top: 4%;*/
+/*}*/
 
 div.footer {
-    margin-top: 14%;
+    margin-top: 5%;
 }
 
 .block-inline {
     display: inline-block;
 }
 
-.center {
-    text-align: center;
+.gray-font {
+    color: #737a8d;
 }
+
+.protocol-font {
+    color: #737a8d;
+}
+
+.download-font {
+    color: #413f4d;
+}
+
+.download-font-phone {
+    color: #747f93;
+}
+
+.btn-download-android {
+    width: 78%;
+    background: #4781ff;
+    color: white;
+    font-size: 1.5rem;
+    padding: 8px 0;
+}
+
+.btn-download-ios {
+    width: 78%;
+    background: #6750e9;
+    color: white;
+    font-size: 1.5rem;
+    padding: 8px 0;
+}
+

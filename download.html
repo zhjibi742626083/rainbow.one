@@ -12,99 +12,107 @@
 </head>
 <body>
 
-<div class="container-fluid">
-    <div class="row clearfix top">
-        <div class="col-md-10 column col-md-offset-2">
-            <img class="block-inline" width="40" height="40"  alt="40X40" src="./resources/img/icon.png" />
-            <h3 class="block-inline">Rainbow</h3>
-        </div>
-    </div>
-    <div class="row clearfix main">
-        <div class="col-md-6 column col-md-offset-3">
-            <h2 class="center">
-                首款为 IRIS 生态圈打造的跨链数字钱包
-            </h2>
-            <h4 class="center">
-                让资产管理更快捷、更方便、更安全
-            </h4>
-            <div class="row clearfix qr download-pc">
-                <div class="col-md-2 column col-md-offset-3">
-                    <img alt="140x140"
-                         class="qr-android"
-                         src="./resources/img/download-android.png" />
-                    <p class="text-center">Android 下载</p>
-                </div>
-
-                <div class="col-md-2 column col-md-offset-1">
-                    <img alt="140x140"
-                         class="qr-ios"
-                         src="./resources/img/download-ios.png" />
-                    <p class="text-center">iOS 下载</p>
-                </div>
-            </div>
-
-            <div class="download-phone">
-                <div class="row center android">
-                    <div class="col-md-12">
-                        <a href="https://bianjie.ai/rainbow/rainbow.apk" class="btn btn-default">Android 下载</a>
-                    </div>
-                </div>
-                <div class="row center ios">
-                    <div class="col-md-12">
-                        <a href="itms-services://?action=download-manifest&url=https://bianjie.ai/rainbow/rainbow.plist" class="btn btn-default">iOS 下载</a>
-                    </div>
-                </div>
+<div id="all" class="container-fluid" hidden="hidden">
+    <div class="row main pc">
+        <div class="row center">
+            <image src="./resources/img/banner.jpg"/>
+            <div style="position: absolute;z-indent:2;left:0;top: 30px; width: 100%">
+                <span style="float: left; vertical-align: bottom">
+                    <image src="./resources/img/logo.png"/>
+                </span>
+                <span style="float: right; vertical-align: bottom; height: 54px; line-height:54px;">
+                    中文&nbsp;&nbsp;
+                    <image style="display:inline" src="./resources/img/CH&EN-dot.png"/>
+                    <span class="gray-font">&nbsp;&nbsp;English</span>
+                </span>
             </div>
         </div>
     </div>
-
-    <div class="row clearfix content">
-        <div class="col-md-6 column col-md-offset-3">
-            <h3>
-                关于我们
-            </h3>
-            <p class="description">
-                Rainbow是由上海边界智能科技有限公司开发的一款跨链数字钱包，融合了保存、发送、接收多品种数字货币和委托验证节点等功能，边界智能创立于2016年，是在人工智能、大数据分析和区块链领域拥有核心能力的创新企业，专注于为医疗健康、保险和金融行业提供智能化产品和服务，支持可信高效的行业协作。
-                2017年边界智能成为区块链跨链全球项目Cosmos/Tendermint 的中国社区运营和技术开发合作伙伴。
-            </p>
+    <div class="row phone" style="text-align: center">
+        <image src="./resources/img/phone_banner.jpg" width="100%"/>
+        <div style="position: absolute;z-indent:2;left:0;top: 30px; width: 100%">
+            <span style="float: right; vertical-align: bottom; margin-right: 5%">
+                中文&nbsp;&nbsp;
+                <image style="display:inline" src="./resources/img/CH&EN-dot.png"/>
+                <span class="gray-font">&nbsp;&nbsp;English</span>
+            </span>
         </div>
+        <image src="./resources/img/phone_logo.png" width="28%"/>
+        <p style="color: #4781ff; padding-top: 3%; font-size: 2rem">首款为 IRIS 网络打造的数字钱包</p>
     </div>
+    <div class="row center pc">
+        <div class="row download-pc">
+            <div style="float: left;">
+                <img alt="140x140"
+                     class="qr-android"
+                     src="./resources/img/download-android.jpg"/>
+                <p class="text-center download-font" style="padding-top: 20px;">Android 下载</p>
+            </div>
 
-    <div class="row clearfix footer">
-        <div class="col-md-12 column">
-            <p class="text-center">
-                <a href="./service_agreement.html" target="_blank">服务协议</a> |
-                <a href="./privacy.html" target="_blank">隐私条款</a>
-            </p>
-            <p class="text-center">
-                版权所有 © 2018上海边界智能科技有限公司
-            </p>
+            <div style="float: right;">
+                <img alt="140x140"
+                     class="qr-ios"
+                     src="./resources/img/download-ios.jpg"/>
+                <p class="text-center download-font" style="padding-top: 20px;">iOS 下载</p>
+            </div>
         </div>
+        <div style="padding-top: 20px;" class="gray-font">iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
+    </div>
+    <div class="row phone" style="text-align: center; padding-top: 3%;">
+        <button class="btn btn btn-primary btn-download-android"
+                onclick="window.location.href='https://bianjie.ai/rainbow/rainbow.apk'">Android 下载
+        </button>
+        <div style="padding-top: 3%">
+            <button class="btn btn btn-primary btn-download-ios"
+                    onclick="window.location.href='itms-services://?action=download-manifest&url=https://bianjie.ai/rainbow/rainbow.plist'">
+                iOS 下载
+            </button>
+        </div>
+        <div style="padding-top: 2%;" class="gray-font">iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
     </div>
 </div>
+<footer class="footer navbar-fixed-bottom" style="background-color: #f3f3f3; border: 1px solid #d5d5d6">
+    <div class="container">
+        <div class="row center pc" style="padding: 40px 0">
+            <div style="float: left; color: #0f0f0f">
+                <a href="./service_agreement.html" target="_blank">服务协议</a> |
+                <a href="./privacy.html" target="_blank">隐私条款</a>
+            </div>
+            <div class="download-font" style="float: right;">
+                版权所有 © 2018上海边界智能科技有限公司
+            </div>
+        </div>
+        <div class="row phone" style="padding: 20px 0; text-align: center;color: #0f0f0f">
+            <div style="color: #0f0f0f">
+                <a href="./service_agreement.html" target="_blank">服务协议</a> |
+                <a href="./privacy.html" target="_blank">隐私条款</a>
+            </div>
+            <div class="download-font-phone">
+                版权所有 © 2018上海边界智能科技有限公司
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
 
-
-
-<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="./resources/js/jquery.min.js"></script>
-<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-<!--<script src="./resources/js/bootstrap.min.js"></script>-->
-
 <script type="application/javascript">
     $(document).ready(function () {
         var ua = navigator.userAgent;
 
         var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
-            isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+            isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
             isAndroid = ua.match(/(Android)\s+([\d.]+)/),
             isMobile = isIphone || isAndroid;
 
         if (isMobile) {
-            $("div.download-pc").hide();
-            $("div.download-phone").show();
+            $("div.pc").hide();
+            $("div.phone").show();
+            $("#all").show();
         } else {
-            $("div.download-pc").show();
-            $("div.download-phone").hide();
+            $("div.pc").show();
+            $("div.phone").hide();
+            $("#all").show();
         }
     })
 </script>
