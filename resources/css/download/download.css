@@ -82,3 +82,14 @@ div.footer {
     padding: 8px 0;
 }
 
+.row.center.pc {
+    padding-bottom: 80px;
+}
+
+img.qr-ios {
+    width: 140px;
+}
+
+img.qr-android {
+    width: 140px;
+}
