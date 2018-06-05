@@ -40,6 +40,36 @@
         <image src="./resources/img/phone_logo.png" width="28%"/>
         <p style="color: #4781ff; padding-top: 3%; font-size: 2rem">首款为 IRIS 网络打造的数字钱包</p>
     </div>
+    <div class="row center pc">
+        <div class="row download-pc">
+            <div style="float: left;">
+                <img alt="140x140"
+                     class="qr-android"
+                     src="./resources/img/download-android.png"/>
+                <p class="text-center download-font" style="padding-top: 20px;">Android 下载</p>
+            </div>
+
+            <div style="float: right;">
+                <img alt="140x140"
+                     class="qr-ios"
+                     src="./resources/img/download-ios.png"/>
+                <p class="text-center download-font" style="padding-top: 20px;">iOS 下载</p>
+            </div>
+        </div>
+        <div style="padding-top: 20px;" class="gray-font">iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
+    </div>
+    <div class="row phone" style="text-align: center; padding-top: 3%;">
+        <button class="btn btn btn-primary btn-download-android"
+                onclick="window.location.href='https://bianjie.ai/rainbow/${env}/rainbow-latest.apk'">Android 下载
+        </button>
+        <div style="padding-top: 3%">
+            <button class="btn btn btn-primary btn-download-ios"
+                    onclick="window.location.href='itms-services://?action=download-manifest&url=https://bianjie.ai/rainbow/${env}/rainbow.plist'">
+                iOS 下载
+            </button>
+        </div>
+        <div style="padding-top: 2%;" class="gray-font">iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
+    </div>
 </div>
 <footer class="footer navbar-fixed-bottom" style="background-color: #f3f3f3; border: 1px solid #d5d5d6">
     <div class="container">
