@@ -30,7 +30,7 @@
         <div class="title">
             <span id="title-first">第一个支持</span><span id="font-big">跨链</span>
         </div>
-        <span class="title-info">多资产转移及服务消费的IRISnet 移动客户端</span>
+        <span class="title-info">多资产转移及服务消费的 IRISnet 移动客户端</span>
             <p class="public-beta-font">公测即将开启，敬请期待...</p>
     </div>
         <div class="footer-content">
@@ -61,7 +61,7 @@
                        <a class="privacy-link" href="./service_agreement.html" target="_blank">服务协议</a>
                        <span class="mobile-bottom-line">|</span>
                        <a class="terms-link" href="./privacy.html" target="_blank">隐私条款</a>
-                       <p>版权所有 © 2018上海边界智能科技有限公司</p>
+                       <p class="bottom-copyright">版权所有 © 2018上海边界智能科技有限公司</p>
                    </div>
                </div>
            </div>
@@ -95,22 +95,24 @@
         $(".gray-font").css("color","#000");
         $("#title-first").text("第一个支持");
         $('#font-big').text("跨链");
-        $('.title-info').text("多资产转移及服务消费的IRISnet 移动客户端");
+        $('.title-info').text("多资产转移及服务消费的 IRISnet 移动客户端");
         $('.public-beta-font').text("公测即将开启，敬请期待...");
-        $("#font-big").css("visibility","visible");
+        $("#font-big").css("display","inline");
         $(".privacy-link").text("服务协议");
         $(".terms-link").text("隐私政策");
+        $(".copyright-content").text("版权所有 © 2018上海边界智能科技有限公司")
 
     });
     $(".gray-font").click(function () {
         $(".ch-lang-btn").css("color","#000");
         $(".gray-font").css("color","#3498DB");
         $('.public-beta-font').text("We will open public test soon");
-        $("#font-big").css("visibility","hidden");
+        $("#font-big").css("display","none");
         $("#title-first").text("First IRISnet mobile client that supports cross-chain ");
         $(".title-info").text("multi-asset transfers and iServices consumption");
         $(".privacy-link").text("Privacy");
         $(".terms-link").text("Terms");
+        $(".copyright-content").text("Copyright © 2018 Bianjie AI Inc. All rights reserved.")
     })
     $(".lang-cn-btn").on("touchstart",function () {
         $(".lang-cn-btn").css("color","#3498DB");
@@ -121,6 +123,7 @@
         $(".info-title-client").css("display","block");
         $(".info-title").text("第一个支持跨链");
         $(".info-title-client").text("多资产转移及服务消费的 IRISnet 移动客户端");
+        $(".bottom-copyright").text("版权所有 © 2018上海边界智能科技有限公司")
     });
     $(".lang-en-btn").on("touchstart",function () {
         $(".lang-cn-btn").css("color","#000");
@@ -130,6 +133,7 @@
         $(".public-beta-title").text("We will open public test soon");
         $(".privacy-link").text("Privacy");
         $(".terms-link").text("Terms");
+        $(".bottom-copyright").text("Copyright © 2018 Bianjie AI Inc. All rights reserved.")
     })
 </script>
 </body>
