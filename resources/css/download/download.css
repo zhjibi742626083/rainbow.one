@@ -116,6 +116,9 @@ div.footer {
     color: #000;
     display: flex;
 }
+.lang-block:hover{
+    cursor: pointer ;
+}
 .ch-lang-btn{
     line-height: 84px;
 }
