@@ -21,27 +21,27 @@
                     <image src="./resources/img/titleLogo.png"/>
                 </div>
                 <div class="lang-block">
-                    <span class="ch-lang-btn" data-i18n-text="langZh">中文</span>
+                    <span class="ch-lang-btn" data-i18n-text="langZh"></span>
                     <span class="line"></span>
-                    <span class="gray-font" data-i18n-text="langEn">English</span>
+                    <span class="gray-font" data-i18n-text="langEn"></span>
                 </div>
             </div>
         </div>
         <div class="font-container">
         <div class="title">
-            <span id="title-first" data-i18n-text="titleFirst">第一个支持</span><span id="font-big" class="font-big" data-i18n-text="fontBig">跨链</span>
+            <span id="title-first" data-i18n-text="titleFirst"></span><span id="font-big" class="font-big" data-i18n-text="fontBig"></span>
         </div>
-        <span class="title-info" data-i18n-text="titleInfo">多资产转移及服务消费的 IRISnet 移动客户端</span>
-            <p class="public-beta-font" data-i18n-text="publicBetaFont">公测即将开启，敬请期待...</p>
+        <span class="title-info" data-i18n-text="titleInfo"></span>
+            <p class="public-beta-font" data-i18n-text="publicBetaFont"></p>
     </div>
         <div class="footer-content">
             <div class="footer-bottom-content">
                 <div class="privacy-content">
-                    <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink">服务协议</a>
+                    <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
                     <span class="bottom-line">|</span>
-                    <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink">隐私条款</a>
+                    <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
                 </div>
-                <div class="copyright-content"><span data-i18n-text="copyrightContent">版权所有 © 2018上海边界智能科技有限公司</span></div>
+                <div class="copyright-content"><span data-i18n-text="copyrightContent"></span></div>
             </div>
         </div>
     </div>
@@ -49,20 +49,20 @@
         <div class="mobile-content">
            <div class="mobile-img-logo">
                <div class="lang-content">
-                   <span class="lang-cn-btn" data-i18n-text="langZh">中文</span>
-                   <span class="lang-en-btn" data-i18n-text="langEn">English</span>
+                   <span class="lang-cn-btn" data-i18n-text="langZh"></span>
+                   <span class="lang-en-btn" data-i18n-text="langEn"></span>
                </div>
                <img src="./resources/img/mobile-logo.jpg" alt="">
                <div class="font-content" style="color: #0f0f0f">
                    <h5>RAINBOW</h5>
-                   <p class="info-title" data-i18n-text="mobileTitleFirst">第一个支持跨链</p>
-                   <p class="info-title-client" data-i18n-text="mobileClient">多资产转移及服务消费的 IRISnet 移动客户端</p>
-                   <p class="public-beta-title" data-i18n-text="mobileBeatTitle">公测即将开启，敬请期待...</p>
+                   <p class="info-title" data-i18n-text="mobileTitleFirst"></p>
+                   <p class="info-title-client" data-i18n-text="mobileClient"></p>
+                   <p class="public-beta-title" data-i18n-text="mobileBeatTitle"></p>
                    <div class="footer">
-                       <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink">服务协议</a>
+                       <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
                        <span class="mobile-bottom-line">|</span>
-                       <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink">隐私条款</a>
-                       <p class="bottom-copyright" data-i18n-text="copyrightContent">版权所有 © 2018上海边界智能科技有限公司</p>
+                       <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
+                       <p class="bottom-copyright" data-i18n-text="copyrightContent"></p>
                    </div>
                </div>
            </div>
@@ -91,17 +91,14 @@
             $("div.phone").hide();
             $("#all").show();
         }
+        changLang("zh");
     });
-
-    $(".ch-lang-btn").click(function () {
-        $(".gray-font").removeClass("change-color");
-        $(".ch-lang-btn").addClass("change-color");
-        $(".font-big").removeClass("hide-text");
+    function changLang(currnetLang){
         $.i18n.properties({
-            name:"zh",
+            name:currnetLang,
             path:"./resources/i18n/",
             mode:"map",
-            language:"zh",
+            language:currnetLang,
             callback:function () {
                 try {
                     $('[data-i18n-text]').each(function () {
@@ -116,10 +113,16 @@
                     })
                 }
                 catch (e) {
-                    
+
                 }
             }
         });
+    };
+    $(".ch-lang-btn").click(function () {
+        $(".gray-font").removeClass("change-color");
+        $(".ch-lang-btn").addClass("change-color");
+        $(".font-big").removeClass("hide-text");
+        changLang("zh")
     });
 
     $(".gray-font").click(function () {
@@ -127,58 +130,14 @@
         $(".ch-lang-btn").addClass("default-color");
         $(".gray-font").addClass("change-color");
         $(".font-big").addClass("hide-text");
-        $.i18n.properties({
-            name:"en",
-            path:"./resources/i18n/",
-            mode:"map",
-            language:"en",
-            callback:function () {
-                try {
-                    $('[data-i18n-text]').each(function () {
-                        var html = $(this).html();
-                        var reg = /<(.*)>/;
-                        if(reg.test(html)){
-                            var htmlValue = reg.exec(html)[0];
-                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
-                        }else {
-                            $(this).text($.i18n.prop($(this).data('i18n-text')));
-                        }
-                    })
-                }
-                catch (e) {
-
-                }
-            }
-        });
+        changLang("en")
     });
 
     $(".lang-cn-btn").on("touchstart",function () {
         $(".lang-en-btn").removeClass("change-color");
         $(".lang-cn-btn").addClass("change-color");
         $(".info-title-client").removeClass("hide-text");
-        $.i18n.properties({
-            name:"zh",
-            path:"./resources/i18n/",
-            mode:"map",
-            language:"zh",
-            callback:function () {
-                try {
-                    $('[data-i18n-text]').each(function () {
-                        var html = $(this).html();
-                        var reg = /<(.*)>/;
-                        if(reg.test(html)){
-                            var htmlValue = reg.exec(html)[0];
-                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
-                        }else {
-                            $(this).text($.i18n.prop($(this).data('i18n-text')));
-                        }
-                    })
-                }
-                catch (e) {
-
-                }
-            }
-        });
+        changLang("zh")
     });
 
     $(".lang-en-btn").on("touchstart",function () {
@@ -186,29 +145,7 @@
         $(".lang-cn-btn").addClass("default-color");
         $(".lang-en-btn").addClass("change-color");
         $(".info-title-client").addClass("hide-text");
-        $.i18n.properties({
-            name:"en",
-            path:"./resources/i18n/",
-            mode:"map",
-            language:"en",
-            callback:function () {
-                try {
-                    $('[data-i18n-text]').each(function () {
-                        var html = $(this).html();
-                        var reg = /<(.*)>/;
-                        if(reg.test(html)){
-                            var htmlValue = reg.exec(html)[0];
-                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
-                        }else {
-                            $(this).text($.i18n.prop($(this).data('i18n-text')));
-                        }
-                    })
-                }
-                catch (e) {
-
-                }
-            }
-        });
+        changLang("en")
     })
 </script>
 </body>
