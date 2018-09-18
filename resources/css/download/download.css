@@ -246,3 +246,15 @@ div.footer {
 .lang-cn-btn{
     color: #3498DB;
 }
+.default-color{
+    color: #737a8d;
+}
+.change-color{
+    color: #3498DB;
+}
+.hide-text{
+    display: none;
+}
+a:focus {
+    outline: none;
+}
