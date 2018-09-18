@@ -7,6 +7,7 @@
     <title>Rainbow</title>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <!-- Bootstrap -->
+    <link href="./resources/img/page_icon.png" rel="shortcut icon" type="image/x-icon">
     <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
     <link href="./resources/css/download/download.css" rel="stylesheet">
 </head>
@@ -20,27 +21,27 @@
                     <image src="./resources/img/titleLogo.png"/>
                 </div>
                 <div class="lang-block">
-                    <span class="ch-lang-btn">中文</span>
+                    <span class="ch-lang-btn" data-i18n-text="langZh">中文</span>
                     <span class="line"></span>
-                    <span class="gray-font">English</span>
+                    <span class="gray-font" data-i18n-text="langEn">English</span>
                 </div>
             </div>
         </div>
         <div class="font-container">
         <div class="title">
-            <span id="title-first">第一个支持</span><span id="font-big">跨链</span>
+            <span id="title-first" data-i18n-text="titleFirst">第一个支持</span><span id="font-big" class="font-big" data-i18n-text="fontBig">跨链</span>
         </div>
-        <span class="title-info">多资产转移及服务消费的 IRISnet 移动客户端</span>
-            <p class="public-beta-font">公测即将开启，敬请期待...</p>
+        <span class="title-info" data-i18n-text="titleInfo">多资产转移及服务消费的 IRISnet 移动客户端</span>
+            <p class="public-beta-font" data-i18n-text="publicBetaFont">公测即将开启，敬请期待...</p>
     </div>
         <div class="footer-content">
             <div class="footer-bottom-content">
                 <div class="privacy-content">
-                    <a class="privacy-link" href="./service_agreement.html" target="_blank">服务协议</a>
+                    <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink">服务协议</a>
                     <span class="bottom-line">|</span>
-                    <a class="terms-link" href="./privacy.html" target="_blank">隐私条款</a>
+                    <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink">隐私条款</a>
                 </div>
-                <div class="copyright-content"><span>版权所有 © 2018上海边界智能科技有限公司</span></div>
+                <div class="copyright-content"><span data-i18n-text="copyrightContent">版权所有 © 2018上海边界智能科技有限公司</span></div>
             </div>
         </div>
     </div>
@@ -48,20 +49,20 @@
         <div class="mobile-content">
            <div class="mobile-img-logo">
                <div class="lang-content">
-                   <span class="lang-cn-btn">中文</span>
-                   <span class="lang-en-btn">English</span>
+                   <span class="lang-cn-btn" data-i18n-text="langZh">中文</span>
+                   <span class="lang-en-btn" data-i18n-text="langEn">English</span>
                </div>
                <img src="./resources/img/mobile-logo.jpg" alt="">
                <div class="font-content" style="color: #0f0f0f">
                    <h5>RAINBOW</h5>
-                   <p class="info-title">第一个支持跨链</p>
-                   <p class="info-title-client">多资产转移及服务消费的 IRISnet 移动客户端</p>
-                   <p class="public-beta-title">公测即将开启，敬请期待...</p>
+                   <p class="info-title" data-i18n-text="mobileTitleFirst">第一个支持跨链</p>
+                   <p class="info-title-client" data-i18n-text="mobileClient">多资产转移及服务消费的 IRISnet 移动客户端</p>
+                   <p class="public-beta-title" data-i18n-text="mobileBeatTitle">公测即将开启，敬请期待...</p>
                    <div class="footer">
-                       <a class="privacy-link" href="./service_agreement.html" target="_blank">服务协议</a>
+                       <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink">服务协议</a>
                        <span class="mobile-bottom-line">|</span>
-                       <a class="terms-link" href="./privacy.html" target="_blank">隐私条款</a>
-                       <p class="bottom-copyright">版权所有 © 2018上海边界智能科技有限公司</p>
+                       <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink">隐私条款</a>
+                       <p class="bottom-copyright" data-i18n-text="copyrightContent">版权所有 © 2018上海边界智能科技有限公司</p>
                    </div>
                </div>
            </div>
@@ -71,6 +72,7 @@
 </div>
 
 <script src="./resources/js/jquery.min.js"></script>
+<script src="./resources/js/jquery.i18n.properties-min.js"></script>
 <script type="application/javascript">
     $(document).ready(function () {
         var ua = navigator.userAgent;
@@ -89,51 +91,124 @@
             $("div.phone").hide();
             $("#all").show();
         }
-    })
-    $(".ch-lang-btn").click(function () {
-        $(".ch-lang-btn").css("color","#3498DB");
-        $(".gray-font").css("color","#000");
-        $("#title-first").text("第一个支持");
-        $('#font-big').text("跨链");
-        $('.title-info').text("多资产转移及服务消费的 IRISnet 移动客户端");
-        $('.public-beta-font').text("公测即将开启，敬请期待...");
-        $("#font-big").css("display","inline");
-        $(".privacy-link").text("服务协议");
-        $(".terms-link").text("隐私政策");
-        $(".copyright-content").text("版权所有 © 2018上海边界智能科技有限公司")
+    });
 
+    $(".ch-lang-btn").click(function () {
+        $(".gray-font").removeClass("change-color");
+        $(".ch-lang-btn").addClass("change-color");
+        $(".font-big").removeClass("hide-text");
+        $.i18n.properties({
+            name:"zh",
+            path:"./resources/i18n/",
+            mode:"map",
+            language:"zh",
+            callback:function () {
+                try {
+                    $('[data-i18n-text]').each(function () {
+                        var html = $(this).html();
+                        var reg = /<(.*)>/;
+                        if(reg.test(html)){
+                            var htmlValue = reg.exec(html)[0];
+                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
+                        }else {
+                            $(this).text($.i18n.prop($(this).data('i18n-text')));
+                        }
+                    })
+                }
+                catch (e) {
+                    
+                }
+            }
+        });
     });
+
     $(".gray-font").click(function () {
-        $(".ch-lang-btn").css("color","#000");
-        $(".gray-font").css("color","#3498DB");
-        $('.public-beta-font').text("We will open public test soon");
-        $("#font-big").css("display","none");
-        $("#title-first").text("First IRISnet mobile client that supports cross-chain ");
-        $(".title-info").text("multi-asset transfers and iServices consumption");
-        $(".privacy-link").text("Privacy");
-        $(".terms-link").text("Terms");
-        $(".copyright-content").text("Copyright © 2018 Bianjie AI Inc. All rights reserved.")
-    })
-    $(".lang-cn-btn").on("touchstart",function () {
-        $(".lang-cn-btn").css("color","#3498DB");
-        $(".lang-en-btn").css("color","#000");
-        $(".privacy-link").text("服务协议");
-        $(".terms-link").text("隐私政策");
-        $(".public-beta-title").text("公测即将开启，敬请期待...");
-        $(".info-title-client").css("display","block");
-        $(".info-title").text("第一个支持跨链");
-        $(".info-title-client").text("多资产转移及服务消费的 IRISnet 移动客户端");
-        $(".bottom-copyright").text("版权所有 © 2018上海边界智能科技有限公司")
+        $(".ch-lang-btn").removeClass("change-color");
+        $(".ch-lang-btn").addClass("default-color");
+        $(".gray-font").addClass("change-color");
+        $(".font-big").addClass("hide-text");
+        $.i18n.properties({
+            name:"en",
+            path:"./resources/i18n/",
+            mode:"map",
+            language:"en",
+            callback:function () {
+                try {
+                    $('[data-i18n-text]').each(function () {
+                        var html = $(this).html();
+                        var reg = /<(.*)>/;
+                        if(reg.test(html)){
+                            var htmlValue = reg.exec(html)[0];
+                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
+                        }else {
+                            $(this).text($.i18n.prop($(this).data('i18n-text')));
+                        }
+                    })
+                }
+                catch (e) {
+
+                }
+            }
+        });
     });
+
+    $(".lang-cn-btn").on("touchstart",function () {
+        $(".lang-en-btn").removeClass("change-color");
+        $(".lang-cn-btn").addClass("change-color");
+        $(".info-title-client").removeClass("hide-text");
+        $.i18n.properties({
+            name:"zh",
+            path:"./resources/i18n/",
+            mode:"map",
+            language:"zh",
+            callback:function () {
+                try {
+                    $('[data-i18n-text]').each(function () {
+                        var html = $(this).html();
+                        var reg = /<(.*)>/;
+                        if(reg.test(html)){
+                            var htmlValue = reg.exec(html)[0];
+                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
+                        }else {
+                            $(this).text($.i18n.prop($(this).data('i18n-text')));
+                        }
+                    })
+                }
+                catch (e) {
+
+                }
+            }
+        });
+    });
+
     $(".lang-en-btn").on("touchstart",function () {
-        $(".lang-cn-btn").css("color","#000");
-        $(".lang-en-btn").css("color","#3498DB");
-        $(".info-title").text("First IRISnet mobile client that supports cross-chain multi-asset transfers and iServices consumption");
-        $(".info-title-client").css("display","none");
-        $(".public-beta-title").text("We will open public test soon");
-        $(".privacy-link").text("Privacy");
-        $(".terms-link").text("Terms");
-        $(".bottom-copyright").text("Copyright © 2018 Bianjie AI Inc. All rights reserved.")
+        $(".lang-cn-btn").removeClass("change-color");
+        $(".lang-cn-btn").addClass("default-color");
+        $(".lang-en-btn").addClass("change-color");
+        $(".info-title-client").addClass("hide-text");
+        $.i18n.properties({
+            name:"en",
+            path:"./resources/i18n/",
+            mode:"map",
+            language:"en",
+            callback:function () {
+                try {
+                    $('[data-i18n-text]').each(function () {
+                        var html = $(this).html();
+                        var reg = /<(.*)>/;
+                        if(reg.test(html)){
+                            var htmlValue = reg.exec(html)[0];
+                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
+                        }else {
+                            $(this).text($.i18n.prop($(this).data('i18n-text')));
+                        }
+                    })
+                }
+                catch (e) {
+
+                }
+            }
+        });
     })
 </script>
 </body>
