@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 移动设备优先 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Rainbow</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!-- Bootstrap -->
+    <link href="./resources/img/page_icon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./resources/css/download/download.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="all" class="container-fluid" hidden="hidden">
+    <div class="row main pc">
+        <div class="header-title-content">
+            <div class="header-title">
+                <div class="header-logo">
+                    <image src="./resources/img/titleLogo.png"/>
+                </div>
+                <div class="lang-block">
+                    <span class="ch-lang-btn" data-i18n-text="langZh"></span>
+                    <span class="line"></span>
+                    <span class="gray-font" data-i18n-text="langEn"></span>
+                </div>
+            </div>
+        </div>
+        <div class="font-container">
+        <div class="title">
+            <span id="title-first" data-i18n-text="titleFirst"></span><span id="font-big" class="font-big" data-i18n-text="fontBig"></span>
+        </div>
+        <span class="title-info" data-i18n-text="titleInfo"></span>
+            <p class="public-beta-font" data-i18n-text="publicBetaFont"></p>
+    </div>
+        <div class="footer-content">
+            <div class="footer-bottom-content">
+                <div class="privacy-content">
+                    <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
+                    <span class="bottom-line">|</span>
+                    <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
+                </div>
+                <div class="copyright-content"><span data-i18n-text="copyrightContent"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="row phone" style="text-align: center">
+        <div class="mobile-content">
+           <div class="mobile-img-logo">
+               <div class="lang-content">
+                   <span class="lang-cn-btn" data-i18n-text="langZh"></span>
+                   <span class="lang-en-btn" data-i18n-text="langEn"></span>
+               </div>
+               <img src="./resources/img/mobile-logo.jpg" alt="">
+               <div class="font-content" style="color: #0f0f0f">
+                   <h5>RAINBOW</h5>
+                   <p class="info-title" data-i18n-text="mobileTitleFirst"></p>
+                   <p class="info-title-client" data-i18n-text="mobileClient"></p>
+                   <p class="public-beta-title" data-i18n-text="mobileBeatTitle"></p>
+                   <div class="footer">
+                       <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
+                       <span class="mobile-bottom-line">|</span>
+                       <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
+                       <p class="bottom-copyright" data-i18n-text="copyrightContent"></p>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="./resources/js/jquery.min.js"></script>
+<script src="./resources/js/jquery.i18n.properties-min.js"></script>
+<script type="application/javascript">
+    $(document).ready(function () {
+        var ua = navigator.userAgent;
+
+        var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+            isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+            isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+            isMobile = isIphone || isAndroid;
+
+        if (isMobile) {
+            $("div.pc").hide();
+            $("div.phone").show();
+            $("#all").show();
+        } else {
+            $("div.pc").show();
+            $("div.phone").hide();
+            $("#all").show();
+        }
+        changLang("zh");
+    });
+    function changLang(currnetLang){
+        $.i18n.properties({
+            name:currnetLang,
+            path:"./resources/i18n/",
+            mode:"map",
+            language:currnetLang,
+            callback:function () {
+                try {
+                    $('[data-i18n-text]').each(function () {
+                        var html = $(this).html();
+                        var reg = /<(.*)>/;
+                        if(reg.test(html)){
+                            var htmlValue = reg.exec(html)[0];
+                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
+                        }else {
+                            $(this).text($.i18n.prop($(this).data('i18n-text')));
+                        }
+                    })
+                }
+                catch (e) {
+
+                }
+            }
+        });
+    };
+    $(".ch-lang-btn").click(function () {
+        $(".gray-font").removeClass("change-color");
+        $(".ch-lang-btn").addClass("change-color");
+        $(".font-big").removeClass("hide-text");
+        changLang("zh")
+    });
+
+    $(".gray-font").click(function () {
+        $(".ch-lang-btn").removeClass("change-color");
+        $(".ch-lang-btn").addClass("default-color");
+        $(".gray-font").addClass("change-color");
+        $(".font-big").addClass("hide-text");
+        changLang("en")
+    });
+
+    $(".lang-cn-btn").on("touchstart",function () {
+        $(".lang-en-btn").removeClass("change-color");
+        $(".lang-cn-btn").addClass("change-color");
+        $(".info-title-client").removeClass("hide-text");
+        changLang("zh")
+    });
+
+    $(".lang-en-btn").on("touchstart",function () {
+        $(".lang-cn-btn").removeClass("change-color");
+        $(".lang-cn-btn").addClass("default-color");
+        $(".lang-en-btn").addClass("change-color");
+        $(".info-title-client").addClass("hide-text");
+        changLang("en")
+    })
+</script>
+</body>
+</html>
