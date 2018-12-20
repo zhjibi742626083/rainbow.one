@@ -15,64 +15,90 @@
 
 <div id="all" class="container-fluid" hidden="hidden">
     <div class="row main pc">
-        <div class="header-title-content">
-            <div class="header-title">
-                <div class="header-logo">
-                    <image src="./resources/img/titleLogo.png"/>
-                </div>
-                <div class="lang-block">
-                    <span class="ch-lang-btn" data-i18n-text="langZh"></span>
-                    <span class="line"></span>
-                    <span class="gray-font" data-i18n-text="langEn"></span>
-                </div>
-            </div>
-        </div>
-        <div class="font-container">
-        <div class="title">
-            <span id="title-first" data-i18n-text="titleFirst"></span><span id="font-big" class="font-big" data-i18n-text="fontBig"></span>
-        </div>
-        <span class="title-info" data-i18n-text="titleInfo"></span>
-            <p class="public-beta-font" data-i18n-text="publicBetaFont"></p>
-    </div>
-        <div class="footer-content">
-            <div class="footer-bottom-content">
-                <div class="privacy-content">
-                    <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
-                    <span class="bottom-line">|</span>
-                    <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
-                </div>
-                <div class="copyright-content"><span data-i18n-text="copyrightContent"></span></div>
+        <div class="row center">
+            <image src="./resources/img/banner.jpg"/>
+            <div style="position: absolute;z-indent:2;left:0;top: 30px; width: 100%">
+                <span style="float: left; vertical-align: bottom">
+                    <image src="./resources/img/logo.png"/>
+                </span>
+                <span style="float: right; vertical-align: bottom; height: 54px; line-height:54px;">
+                    中文&nbsp;&nbsp;
+                    <image style="display:inline" src="./resources/img/CH&EN-dot.png"/>
+                    <span class="gray-font">&nbsp;&nbsp;English</span>
+                </span>
             </div>
         </div>
     </div>
     <div class="row phone" style="text-align: center">
-        <div class="mobile-content">
-           <div class="mobile-img-logo">
-               <div class="lang-content">
-                   <span class="lang-cn-btn" data-i18n-text="langZh"></span>
-                   <span class="lang-en-btn" data-i18n-text="langEn"></span>
-               </div>
-               <img src="./resources/img/mobile-logo.jpg" alt="">
-               <div class="font-content" style="color: #0f0f0f">
-                   <h5>RAINBOW</h5>
-                   <p class="info-title" data-i18n-text="mobileTitleFirst"></p>
-                   <p class="info-title-client" data-i18n-text="mobileClient"></p>
-                   <p class="public-beta-title" data-i18n-text="mobileBeatTitle"></p>
-                   <div class="footer">
-                       <a class="privacy-link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
-                       <span class="mobile-bottom-line">|</span>
-                       <a class="terms-link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
-                       <p class="bottom-copyright" data-i18n-text="copyrightContent"></p>
-                   </div>
-               </div>
-           </div>
+        <image src="./resources/img/phone_banner.jpg" width="100%"/>
+        <div style="position: absolute;z-indent:2;left:0;top: 30px; width: 100%">
+            <span style="float: right; vertical-align: bottom; margin-right: 5%">
+                中文&nbsp;&nbsp;
+                <image style="display:inline" src="./resources/img/CH&EN-dot.png"/>
+                <span class="gray-font">&nbsp;&nbsp;English</span>
+            </span>
         </div>
+        <image src="./resources/img/phone_logo.png" width="28%"/>
+        <p style="color: #4781ff; padding-top: 3%; font-size: 2rem">首款为 IRIS 网络打造的数字钱包</p>
+    </div>
+    <div class="row center pc">
+        <div class="row download-pc">
+            <div style="float: left;">
+                <img alt="140x140"
+                     class="qr-android"
+                     src="./resources/img/download-android.png"/>
+                <p class="text-center download-font" style="padding-top: 20px;">Android 下载</p>
+            </div>
+
+            <div style="float: right;">
+                <img alt="140x140"
+                     class="qr-ios"
+                     src="./resources/img/download-ios.png"/>
+                <p class="text-center download-font" style="padding-top: 20px;">iOS 下载</p>
+            </div>
+        </div>
+        <div style="margin:0 20px;color:#737a8d;font-size: 12px;padding-top: 20px;">为避免兼容性问题影响使用，请卸载历史版本App，安装最新版本.</div>
+        <div class="gray-font">iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
+    </div>
+    <div class="row phone" style="text-align: center; padding-top: 3%;">
+        <button class="btn btn btn-primary btn-download-android"
+                onclick="window.location.href='https://d.rainbowinstaller.cn/${env}/rainbow-latest.apk'">Android 下载
+        </button>
+        <div style="padding-top: 3%">
+            <button class="btn btn btn-primary btn-download-ios"
+                    onclick="window.location.href='itms-services://?action=download-manifest&url=https://d.rainbowinstaller.cn/${env}/rainbow.plist'">
+                iOS 下载
+            </button>
+        </div>
+        <div style="margin:0 20px;color:#737a8d;font-size: 12px;padding-top: 2%;">为避免兼容性问题影响使用，请卸载历史版本App，安装最新版本.iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
     </div>
 </div>
 </div>
+<footer class="footer navbar-fixed-bottom" style="background-color: #f3f3f3; border: 1px solid #d5d5d6;position: static">
+    <div class="container">
+        <div class="row center pc" style="padding: 20px 0">
+            <div style="float: left; color: #0f0f0f">
+                <a href="./service_agreement.html" target="_blank">服务协议</a> |
+                <a href="./privacy.html" target="_blank">隐私条款</a>
+            </div>
+            <div class="download-font" style="float: right;">
+                版权所有 © 2018上海边界智能科技有限公司
+            </div>
+        </div>
+        <div class="row phone" style="padding: 20px 0; text-align: center;color: #0f0f0f">
+            <div style="color: #0f0f0f">
+                <a href="./service_agreement.html" target="_blank">服务协议</a> |
+                <a href="./privacy.html" target="_blank">隐私条款</a>
+            </div>
+            <div class="download-font-phone">
+                版权所有 © 2018上海边界智能科技有限公司
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
 
 <script src="./resources/js/jquery.min.js"></script>
-<script src="./resources/js/jquery.i18n.properties-min.js"></script>
 <script type="application/javascript">
     $(document).ready(function () {
         var ua = navigator.userAgent;
@@ -91,61 +117,6 @@
             $("div.phone").hide();
             $("#all").show();
         }
-        changLang("zh");
-    });
-    function changLang(currnetLang){
-        $.i18n.properties({
-            name:currnetLang,
-            path:"./resources/i18n/",
-            mode:"map",
-            language:currnetLang,
-            callback:function () {
-                try {
-                    $('[data-i18n-text]').each(function () {
-                        var html = $(this).html();
-                        var reg = /<(.*)>/;
-                        if(reg.test(html)){
-                            var htmlValue = reg.exec(html)[0];
-                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
-                        }else {
-                            $(this).text($.i18n.prop($(this).data('i18n-text')));
-                        }
-                    })
-                }
-                catch (e) {
-
-                }
-            }
-        });
-    };
-    $(".ch-lang-btn").click(function () {
-        $(".gray-font").removeClass("change-color");
-        $(".ch-lang-btn").addClass("change-color");
-        $(".font-big").removeClass("hide-text");
-        changLang("zh")
-    });
-
-    $(".gray-font").click(function () {
-        $(".ch-lang-btn").removeClass("change-color");
-        $(".ch-lang-btn").addClass("default-color");
-        $(".gray-font").addClass("change-color");
-        $(".font-big").addClass("hide-text");
-        changLang("en")
-    });
-
-    $(".lang-cn-btn").on("touchstart",function () {
-        $(".lang-en-btn").removeClass("change-color");
-        $(".lang-cn-btn").addClass("change-color");
-        $(".info-title-client").removeClass("hide-text");
-        changLang("zh")
-    });
-
-    $(".lang-en-btn").on("touchstart",function () {
-        $(".lang-cn-btn").removeClass("change-color");
-        $(".lang-cn-btn").addClass("default-color");
-        $(".lang-en-btn").addClass("change-color");
-        $(".info-title-client").addClass("hide-text");
-        changLang("en")
     })
 </script>
 </body>
