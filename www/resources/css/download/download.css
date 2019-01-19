@@ -1,6 +1,4 @@
-/**
- * css for download html
- */
+
 html {
     font-size: 62.5%
 }
@@ -9,20 +7,11 @@ body {
     color: white;
     font-family: "Microsoft YaHei UI", "serif","PingFang SC Regular","PingFang SC Bold";
     font-size:1rem;
-    /*background-position: center;*/
-}
-/*@media screen  {*/
-/**/
-/*}*/
 
+}
 div.download-pc {
-    /*color: white;*/
-    /*background-color: #0d85cb;*/
-    /*padding-bottom: 4%;*/
-    /*text-align: center;*/
     width: 395px;
     margin: auto;
-    /*position: relative;*/
 }
 
 div.main {
@@ -36,9 +25,6 @@ div.main {
     flex-direction: column;
 }
 
-/*div.main div.qr, div.qr div p {*/
-/*margin-top: 4%;*/
-/*}*/
 
 div.footer {
     margin-top: 5%;
@@ -257,9 +243,6 @@ body{
 }
 .mobile_download_ios_content{
     margin: 0 auto;
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*padding: 0 3rem;*/
 }
 .ios_logo{
     padding-left: 0.2rem;
@@ -291,32 +274,6 @@ body{
     font-size: 1.2rem;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .font_content{
     width: 100%;
     text-align: center;
