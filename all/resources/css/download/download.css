@@ -208,7 +208,12 @@ div.main {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
 }
-
+.mobile_setting_content{
+    padding-top: 0.1rem;
+    font-size: 0.12rem;
+    line-height: 0.14rem;
+    margin-bottom: 0.2rem;
+}
 .lang_block{
     padding-right: 0.2rem;
     color: #000;
@@ -428,6 +433,7 @@ p{
     padding-top: 0.3rem;
 }
 .footer{
+    margin-top: 0.2rem;
     width: 100%;
     text-align: center;
 }
