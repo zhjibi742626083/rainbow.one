@@ -39,7 +39,7 @@
                             <div class="download_android_content">
                                 <img class="android_logo" src="resources/img/android_logo.png">
                                 <span data-i18n-text="android"></span>
-                                <img src="resources/img/qr_logo.png">
+                                <img class="qr_img" src="resources/img/qr_logo.png">
                             </div>
                             <div class="qr_content">
                                 <img class="qr_download_img" src="env/testnet/download_android.jpg" alt="">
@@ -49,7 +49,7 @@
                             <div class="download_ios_content">
                                 <img class="ios_logo" src="resources/img/ios_logo.png">
                                 <span data-i18n-text="ios"></span>
-                                <img src="resources/img/qr_logo.png">
+                                <img class="qr_img" src="resources/img/qr_logo.png">
                             </div>
                             <div class="ios_qr_content">
                                 <img class="ios_qr_download_img" src="env/testnet/download_ios.jpg">
@@ -84,29 +84,31 @@
                 </div>
 
                 <div class="font_content">
-                    <div class="mobile_phone_img">
-                        <img src="resources/img/mobile_phone.png">
-                    </div>
-                    <p class="info_title" data-i18n-text="mobileTitleFirst"></p>
-                    <p class="info_title_client" data-i18n-text="mobileClient"></p>
                     <div>
-                        <div class="mobile_android_content">
-                            <div class="mobile_download_android_content" onclick="window.location.href='https://d.rainbowinstaller.cn/testnet/rainbow-latest.apk'">
-                                <img class="mobile_android_logo" src="resources/img/android_logo.png">
-                                <span class="android" data-i18n-text="android"></span>
-                            </div>
-                            <div class="qr_content">
-                                <img class="qr_download_img" src="env/testnet/download_android.jpg" alt="">
-                            </div>
+                        <div class="mobile_phone_img">
+                            <img class="phone_img" src="resources/img/mobile_phone_zh.png">
                         </div>
-                        <div class="mobile_ios_content">
-                            <div class="mobile_download_ios_content" onclick="window.location.href='itms-services://?action=download-manifest&url=https://d.rainbowinstaller.cn/${env}/rainbow.plist'">
-                                <img class="ios_logo" src="resources/img/ios_logo.png">
-                                <span class="ios" data-i18n-text="ios"></span>
+                        <p class="info_title" data-i18n-text="mobileTitleFirst"></p>
+                        <p class="info_title_client" data-i18n-text="mobileClient"></p>
+                        <div>
+                            <div class="mobile_android_content">
+                                <div class="mobile_download_android_content" onclick="window.location.href='https://d.rainbowinstaller.cn/testnet/rainbow-latest.apk'">
+                                    <img class="mobile_android_logo" src="resources/img/android_logo.png">
+                                    <span class="android" data-i18n-text="android"></span>
+                                </div>
+                                <div class="qr_content">
+                                    <img class="qr_download_img" src="env/testnet/download_android.jpg" alt="">
+                                </div>
                             </div>
-                            <div class="ios_qr_content">
-                                <img class="ios_qr_download_img" src="env/testnet/download_ios.jpg">
-                                <p class="setting_content" data-i18n-text="iOSSetting"></p>
+                            <div class="mobile_ios_content">
+                                <div class="mobile_download_ios_content" onclick="window.location.href='itms-services://?action=download-manifest&url=https://d.rainbowinstaller.cn/${env}/rainbow.plist'">
+                                    <img class="ios_logo" src="resources/img/ios_logo.png">
+                                    <span class="ios" data-i18n-text="ios"></span>
+                                </div>
+                                <div class="ios_qr_content">
+                                    <img class="ios_qr_download_img" src="env/testnet/download_ios.jpg">
+                                    <p class="setting_content" data-i18n-text="iOSSetting"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -196,17 +198,17 @@
     });
 
     $(".lang_cn_btn").on("touchstart",function () {
+		$('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
         $(".lang_en_btn").removeClass("change-color");
         $(".lang_cn_btn").addClass("change-color");
-        $(".info_title_client").removeClass("hide-text");
         changLang("zh")
     });
 
     $(".lang_en_btn").on("touchstart",function () {
-        $(".lang_cn_btn").removeClass("change-color");
+		$('.phone_img').attr("src","resources/img/mobile_phone.png")
+		$(".lang_cn_btn").removeClass("change-color");
         $(".lang_cn_btn").addClass("default-color");
         $(".lang_en_btn").addClass("change-color");
-        $(".info_title_client").addClass("hide-text");
         changLang("en")
     })
 </script>

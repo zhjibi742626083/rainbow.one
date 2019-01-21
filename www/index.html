@@ -63,11 +63,13 @@
                     </div>
                 </div>
                 <div class="font_content">
-                    <p class="info_title" data-i18n-text="mobileTitleFirst"></p>
-                    <p class="info_title_client" data-i18n-text="mobileClient"></p>
-                    <p class="comming_soon" data-i18n-text="mobileBeatTitle"></p>
-                    <div class="mobile_img">
-                        <img src="resources/img/mobile_phone.png">
+                    <div>
+                        <p class="info_title" data-i18n-text="mobileTitleFirst"></p>
+                        <p class="info_title_client" data-i18n-text="mobileClient"></p>
+                        <p class="comming_soon" data-i18n-text="mobileBeatTitle"></p>
+                        <div class="mobile_img">
+                            <img class="phone_img" src="resources/img/mobile_phone_zh.png">
+                        </div>
                     </div>
                     <div class="footer">
                         <a class="privacy_link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
@@ -156,17 +158,17 @@
     });
 
     $(".lang_cn_btn").on("touchstart",function () {
+		$('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
         $(".lang_en_btn").removeClass("change-color");
         $(".lang_cn_btn").addClass("change-color");
-        $(".info_title_client").removeClass("hide-text");
         changLang("zh")
     });
 
     $(".lang_en_btn").on("touchstart",function () {
+		$('.phone_img').attr("src","resources/img/mobile_phone.png")
         $(".lang_cn_btn").removeClass("change-color");
         $(".lang_cn_btn").addClass("default-color");
         $(".lang_en_btn").addClass("change-color");
-        $(".info_title_client").addClass("hide-text");
         changLang("en")
     })
 </script>

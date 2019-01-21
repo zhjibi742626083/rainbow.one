@@ -1,16 +1,15 @@
 
 html {
-    font-size: 62.5%
+    font-size: 625%
 }
 
 body {
     color: white;
     font-family: "Microsoft YaHei UI", "serif","PingFang SC Regular","PingFang SC Bold";
-    font-size:1rem;
+    font-size:16px;
 
 }
 div.download-pc {
-    width: 395px;
     margin: auto;
 }
 
@@ -54,8 +53,8 @@ div.footer {
     width: 78%;
     background: #4781ff;
     color: white;
-    font-size: 15rem;
-    padding: 8px 0;
+    font-size: 1.5rem;
+    padding: 0.08rem 0;
 }
 
 .btn-download-ios {
@@ -66,37 +65,37 @@ div.footer {
     padding: 8px 0;
 }
 .header_wrap{
-    height: 8.4rem;
-    max-width: 120rem;
+    height: 0.84rem;
+    max-width: 12rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    line-height: 84px;
+    line-height: 0.84rem;
 }
 .container_fluid{
     width: 100%;
 }
 .header_logo{
-    padding-left: 2rem;
+    padding-left: 0.2rem;
 }
 .header_logo img{
 }
 .font_container{
     padding-top: 19vh;
-    max-width: 120rem;
+    max-width: 1200px;
     margin: 0 auto;
     color: #fff;
 
 }
 .content_wrap{
-    max-width: 120rem;
+    max-width: 1200px;
     margin: 0 auto;
     height: 100%;
     background: url("../../img/pc_background_phone.png") no-repeat right;
     background-size: auto 100%;
 }
 .title{
-    padding-left: 2rem;
+    padding-left: 0.2rem;
     font-size: 2.6vw;
     color: #fff;
 }
@@ -107,17 +106,17 @@ div.footer {
 }
 .title_info{
     width: 60%;
-    margin-left: 2rem;
+    margin-left: 0.2rem;
     font-size: 2.6vw;
     color: #fff;
 }
 .download_content{
-    margin-top: 5rem;
+    margin-top: 0.5rem;
     display: flex;
-    margin-left: 2rem;
+    margin-left: 0.2rem;
 }
 .download_content p{
-    font-size: 2rem;
+    font-size: 0.2rem;
 }
 
 .lang_block{
@@ -128,37 +127,35 @@ div.footer {
     cursor: pointer ;
 }
 .ch_lang_btn{
-    padding: 0.4rem 1.2rem;
-    font-size: 1.5rem;
+    padding: 0.04rem 0.12rem;
+    font-size: 0.15rem;
     background: #fff;
-    border-radius: 1.2rem;
+    border-radius: 0.12rem;
 }
 .en_lang_btn{
-    padding: 0.4rem 1.2rem;
-    font-size: 1.5rem;
-    border-radius: 1.2rem;
+    padding: 0.04rem 0.12rem;
+    font-size: 0.15rem;
+    border-radius: 0.12rem;
     background: transparent;
 }
 .line{
     display: inline-block;
-    height:  14px;
-    width: 1px;
+    height:  0.14rem;
+    width: 0.02rem;
     background: #fff;
-    line-height: 84px;
-    margin: 35px 15px 0 15px;
+    margin: 0.35rem 0.15rem 0 0.15rem;
 }
 .header_container{
     width: 100%;
 }
 .footer_content{
-    height: 4rem;
-    line-height: 4rem;
+    height: 0.4rem;
     width: 100%;
     color: #000;
 }
 .footer_bottom_content{
     margin: 0 auto;
-    max-width: 120rem;
+    max-width: 12rem;
     display: flex;
     justify-content: space-between;
 }
@@ -167,7 +164,7 @@ div.footer {
     margin: 0 auto;
 }
 .privacy_content{
-    margin-left: 2rem;
+    margin-left: 0.2rem;
 }
 .privacy_content a{
     color: #fff;
@@ -175,18 +172,19 @@ div.footer {
 }
 .bottom_line{
     color: #fff;
-    margin: 0 15px;
+    margin: 0 0.15rem;
 }
 .public-beta-font{
     color: #fff;
-    font-size: 2rem;
-    padding-top: 5.8rem;
-    padding-left: 2rem;
+    font-size: 0.2rem;
+    padding-top: 0.58rem;
+    padding-left: 0.2rem;
 }
 
 .lang_en_btn{
-    padding: 0.2rem 1rem;
-    border-radius: 1rem;
+    font-size: 0.12rem;
+    padding: 0.02rem 0.1rem;
+    border-radius: 0.26rem;
     color: #fff;
 }
 html{
@@ -209,54 +207,58 @@ body{
 }
 
 .mobile_header_logo{
-    height: 30px;
+    width: 100%;
+    height: 0.3rem;
     display: flex;
     justify-content: space-between;
 }
 .mobile_header_logo img{
-
+    width: 1.2rem;
+    height: 0.3rem;
 }
 .mobile_content{
-    padding: 2.1rem 2rem 0 2rem;
+    padding: 0.21rem 0.2rem 0 0.2rem;
     width: 100%;
     height: 100%;
 }
 .mobile_img_logo{
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .mobile_ios_content{
     width: 80%;
-    margin: 2rem auto;
-    border-radius: 0.6rem;
-    height: 3rem;
-    line-height: 3rem;
+    margin: 0.2rem auto;
+    border-radius: 0.06rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
     background: #fff;
 }
 .mobile_android_content{
     width: 80%;
-    margin: 2rem auto;
-    border-radius: 0.6rem;
-    height: 3rem;
-    line-height: 3rem;
+    margin: 0.2rem auto;
+    border-radius: 0.06rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
     background: #fff;
 }
 .mobile_download_ios_content{
     margin: 0 auto;
 }
 .ios_logo{
-    padding-left: 0.2rem;
-    height: 2rem;
+    padding-left: 0.02rem;
+    height: 0.2rem;
 }
 .mobile_android_logo{
-    height: 2rem;
+    height: 0.2rem;
 }
 .mobile_line{
     display: inline-block;
-    height: 14px;
-    width: 1px;
+    height: 0.14rem;
+    width: 0.01rem;
     background: #fff;
-    margin: 0.2rem 0.5rem 0 0.5rem;
+    margin: 0.02rem 0.05rem 0 0.05rem;
 }
 .mobile_lang_content {
     display: flex;
@@ -264,25 +266,28 @@ body{
 }
 .android{
     color: #3498DB;
-    font-size: 1.2rem;
-    width: 4.6rem;
+    font-size: 0.12rem;
+    width: 0.46rem;
     text-align: center;
 }
 .ios{
-    width: 4.6rem;
+    width: 0.46rem;
     color: #3498DB;
-    font-size: 1.2rem;
+    font-size: 0.12rem;
     text-align: center;
 }
 .font_content{
-    width: 100%;
+    flex: 1;
     text-align: center;
-    padding-top: 2.5rem;
+    padding-top: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .font_content h5{
     margin: 0;
     padding: 0;
-    font-size: 2.2rem;
+    font-size: 0.22rem;
     font-weight: 900;
     background-image: -webkit-linear-gradient(left, #3498DB, #62B5ED);
     -webkit-background-clip: text;
@@ -295,37 +300,36 @@ body{
 }
 .lang-content span:nth-child(1){
     text-align: center;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.9rem;
+    padding: 0.02rem 0.05rem;
+    border-radius: 0.09rem;
 }
 .lang-content span:nth-child(2){
     text-align: center;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.9rem;
+    padding: 0.02rem 0.05rem;
+    border-radius: 0.09rem;
 }
 p{
     margin: 0;
     padding: 0;
 }
 .info_title{
-    padding-top: 1.8rem;
-    font-size: 1.8rem;
+    padding-top: 0.18rem;
+    font-size: 0.18rem;
     color: #fff;
 }
 .info_title_client{
-    font-size: 1.8rem;
+    font-size: 0.18rem;
     color: #fff;
 }
 .public-beta-title{
-    font-size: 12px;
+    font-size: 0.12rem;
     color: #717679;
     margin: 0;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 0.3rem;
 }
 .footer{
     width: 100%;
-    position: fixed;
     left: 0;
     text-align: center;
     bottom: 0;
@@ -334,18 +338,20 @@ p{
     color: #fff;
 }
 .mobile_bottom_line{
-    padding: 0 16px;
+    font-size: 0.12rem;
+    padding: 0 0.05rem;
     color: #fff;
 }
 .footer p{
-    padding: 10px 0 10px 0;
+    padding: 0.05rem 0 0.05rem 0;
 }
 .ch_lang_btn{
     color: #3498DB;
 }
 .lang_cn_btn{
-    padding: 0.2rem 1rem;
-    border-radius: 1rem;
+    padding: 0.02rem 0.1rem;
+    border-radius: 0.26rem;
+    font-size: 0.12rem;
     color: #3498DB;
     background: #fff;
 }
@@ -365,6 +371,7 @@ a:focus {
     outline: none;
 }
 .terms_link{
+    font-size: 0.12rem;
     padding: 0;
 }
 .content_container{
@@ -372,9 +379,11 @@ a:focus {
 
 }
 .bottom_copyright{
+    font-size: 0.12rem;
     color: #fff;
 }
 .privacy_link{
+    font-size: 0.12rem;
     color: #fff;
 }
 
@@ -382,24 +391,23 @@ a:focus {
 @media screen and (max-height: 500px){
     .font_container{
         padding-top: 0;
-        max-width: 120rem;
+        max-width: 12rem;
         margin: 0 auto;
         color: #fff;
     }
 }
 @media screen and (max-width: 900px){
     .title{
-        padding-left: 2rem;
-        font-size: 2rem;
+        font-size: 0.2rem;
         color: #fff;
     }
     .title_info{
         width: 60%;
         color: #fff;
-        font-size: 2rem;
+        font-size: 0.2rem;
     }
     #font-big{
-        font-size: 2rem;
+        font-size: 0.2rem;
         color: #fff;
     }
     #title_first{
@@ -408,17 +416,16 @@ a:focus {
 }
 @media screen and (min-width: 1366px){
     .title{
-        padding-left: 2rem;
-        font-size: 3.5rem;
+        font-size: 0.35rem;
         color: #fff;
     }
     .title_info{
         width: 60%;
         color: #fff;
-        font-size: 3.5rem;
+        font-size: 0.35rem;
     }
     #font-big{
-        font-size: 3.5rem;
+        font-size: 0.35rem;
         color: #fff;
     }
 }
@@ -433,14 +440,14 @@ a:focus {
 
     .ios_content{
         z-index: 1;
-        margin-top: 3rem;
+        margin-top: 0.3rem;
         margin-left: 0;
     }
     .android_content:hover.qr_content{
         z-index: 10;
     }
     .android_content{
-        width: 14rem;
+        width: 1.4rem;
     }
 
 }
@@ -453,33 +460,27 @@ a:focus {
 }
 .mobile_download_ios_content{
     box-sizing: border-box;
-    box-sizing: border-box;
     padding: 0 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.mobile_content{
-    background: url("../../img/mobile_background.png");
-}
 .mobile_phone_img{
     width: 35%;
-    height:100%;
     margin: 0 auto;
 }
 .mobile_phone_img{
     width: 100%;
 }
 .mobile_img{
-    padding-top: 4.5rem;
-    width: 35%;
-    height:100%;
+    padding-top: 0.45rem;
+    width: 70%;
     margin: 0 auto;
 }
 .mobile_img img{
     width: 100%;
 }
 .comming_soon{
-    padding-top: 3rem;
-    font-size: 1.4rem;
+    padding-top: 0.1rem;
+    font-size: 0.13rem;
 }
