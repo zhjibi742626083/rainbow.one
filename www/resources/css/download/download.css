@@ -107,7 +107,7 @@ div.footer {
 .title_info{
     width: 60%;
     margin-left: 0.2rem;
-    font-size: 2.6vw;
+    font-size: 2vw;
     color: #fff;
 }
 .download_content{
@@ -120,7 +120,6 @@ div.footer {
 }
 
 .lang_block{
-    padding-right: 2rem;
     color: #000;
 }
 .lang_block:hover{
@@ -318,7 +317,7 @@ p{
     color: #fff;
 }
 .info_title_client{
-    font-size: 0.18rem;
+    font-size: 0.16rem;
     color: #fff;
 }
 .public-beta-title{
@@ -404,7 +403,7 @@ a:focus {
     .title_info{
         width: 60%;
         color: #fff;
-        font-size: 0.2rem;
+        font-size: 0.17rem;
     }
     #font-big{
         font-size: 0.2rem;
@@ -422,10 +421,10 @@ a:focus {
     .title_info{
         width: 60%;
         color: #fff;
-        font-size: 0.35rem;
+        font-size: 0.28rem;
     }
     #font-big{
-        font-size: 0.35rem;
+        font-size: 0.28rem;
         color: #fff;
     }
 }
@@ -482,5 +481,5 @@ a:focus {
 }
 .comming_soon{
     padding-top: 0.1rem;
-    font-size: 0.13rem;
+    font-size: 0.12rem;
 }
