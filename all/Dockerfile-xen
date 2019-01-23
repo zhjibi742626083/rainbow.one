@@ -1,4 +1,4 @@
 FROM nginx:1.14-alpine
 COPY ./all /usr/share/nginx/html/
 COPY all/env/testnet/*.png /usr/share/nginx/html/resources/img/
-RUN sed -i 's/${env}/xen/' /usr/share/nginx/html/index.html
+RUN sed -i 's/${env}/xen/g' /usr/share/nginx/html/index.html
