@@ -129,6 +129,25 @@
 <script type="application/javascript">
     $(document).ready(function () {
         var ua = navigator.userAgent;
+        var lang = navigator.language || navigator.userLanguage;
+        lang = lang.substr(0,2).toLowerCase();
+        if(lang === "zh"){
+            $('.content_wrap').css("background-image","url(resources/img/pc_background_phone.png)")
+            $(".en_lang_btn").removeClass("change-color").addClass("default-color");
+            $(".ch_lang_btn").addClass("change-color");
+            $(".lang_en_btn").removeClass("change-color").addClass("default-color");
+            $(".lang_cn_btn").addClass("change-color");
+            $('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
+            changLang("zh");
+        }else {
+            $('.content_wrap').css("background-image","url(resources/img/pc_background_phone_en.png)")
+            $(".en_lang_btn").addClass("change-color");
+            $(".ch_lang_btn").removeClass("change-color").addClass("default-color");
+            $(".lang_en_btn").addClass("change-color");
+            $(".lang_cn_btn").removeClass("change-color").addClass("default-color");
+            $('.phone_img').attr("src","resources/img/mobile_phone.png")
+            changLang("en");
+        }
 
         var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
             isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
@@ -145,7 +164,6 @@
             $("div.phone").hide();
             $("#all").show();
         }
-        changLang("zh");
     });
     function changLang(currnetLang){
         $.i18n.properties({
