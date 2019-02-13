@@ -33,6 +33,47 @@ div.footer {
     display: inline-block;
 }
 
+
+.download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.22rem;
+    font-size: 0.18rem;
+    height:0.22rem;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+    font-weight: 600;
+}
+.en_style .download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.19rem !important;
+    font-size: 0.18rem;
+    height:0.19rem!important;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+    font-weight: 600;
+}
+.experience{
+    margin-left: 0.02rem;
+    font-size: 0.18rem;
+}
+.download_link:hover{
+    color: #fff;
+}
+.mobile_download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.2rem;
+    height: 0.18rem;
+    font-size: 0.12rem;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+}
+.download_link_content.experience{
+    font-size: 0.12rem;
+    height: 0.2rem;
+}
 .en_lang_btn {
     color: #fff;
 }
@@ -81,7 +122,7 @@ div.footer {
 .header_logo img{
 }
 .font_container{
-    padding-top: 19vh;
+    padding-top: 23vh;
     max-width: 1200px;
     margin: 0 auto;
     color: #fff;
@@ -92,12 +133,38 @@ div.footer {
     margin: 0 auto;
     height: 100%;
     background: url("../../img/pc_background_phone.png") no-repeat right;
-    background-size: auto 100%;
+    background-size: auto 65%;
 }
 .title{
     padding-left: 0.2rem;
     font-size: 2.6vw;
     color: #fff;
+    display: flex;
+}
+.title a{
+    color: #fff;
+}
+.irisnet_link{
+    padding: 0 0.08rem;
+}
+.irisnet_link a{
+    display: inline-block;
+    height: 0.35rem;
+    font-size: 0.35rem;
+    line-height: 1;
+    border-bottom: 0.02rem solid #fff;
+    text-decoration:none;
+}
+.mobile_irisnet_link{
+    display: inline-block;
+    height: 0.22rem;
+    font-size: 0.14rem;
+    line-height: 0.22rem;
+    border-bottom: 0.01rem solid #fff;
+    text-decoration:none;
+}
+.wallet{
+    font-size: 0.16rem;
 }
 
 #font-big{
@@ -111,14 +178,41 @@ div.footer {
     color: #fff;
 }
 .download_content{
-    margin-top: 0.5rem;
+    margin-top: 0.35rem;
     display: flex;
     margin-left: 0.2rem;
+    letter-spacing: 0.01rem;
+}
+.en_style{
+    flex-direction: column;
+}
+.en_style .download_link .experience{
+    margin-left: 0.08rem;
 }
 .download_content p{
-    font-size: 0.2rem;
+    font-size: 0.18rem;
 }
-
+.mobile_download_content{
+    margin-top: 0.24rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.12rem;
+}
+.en_style .mobile_download_link .mobile_link{
+    margin-right: 0.03rem;
+}
+.mobile_title{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.29rem;
+}
+.mobile_title a{
+    display: inline-block;
+    color: #fff;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    font-size: 0.16rem;
+}
 .lang_block{
     color: #000;
 }
@@ -278,7 +372,6 @@ body{
 .font_content{
     flex: 1;
     text-align: center;
-    padding-top: 0.25rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -311,10 +404,10 @@ p{
     margin: 0;
     padding: 0;
 }
-.info_title{
-    padding-top: 0.18rem;
+.mobile_irisnet_link{
     font-size: 0.18rem;
     color: #fff;
+    margin: 0 0.05rem;
 }
 .info_title_client{
     font-size: 0.16rem;
@@ -409,9 +502,7 @@ a:focus {
         font-size: 0.2rem;
         color: #fff;
     }
-    #title_first{
-        margin-right: 50%;
-    }
+
 }
 @media screen and (min-width: 1366px){
     .title{
@@ -480,6 +571,7 @@ a:focus {
     width: 100%;
 }
 .comming_soon{
-    padding-top: 0.1rem;
     font-size: 0.12rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
 }
