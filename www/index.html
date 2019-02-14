@@ -59,7 +59,7 @@
                     <div class="mobile_lang_content">
                         <span class="lang_en_btn" data-i18n-text="langEn"></span>
                         <span class="mobile_line"></span>
-                        <span class="lang_cn_btn" data-i18n-text="langZh"></span>
+                        <span class="lang_zh_btn" data-i18n-text="langZh"></span>
                     </div>
                 </div>
                 <div class="font_content">
@@ -99,7 +99,7 @@
             $(".en_lang_btn").removeClass("change-color").addClass("default-color");
             $(".ch_lang_btn").addClass("change-color");
             $(".lang_en_btn").removeClass("change-color").addClass("default-color");
-            $(".lang_cn_btn").addClass("change-color");
+            $(".lang_zh_btn").addClass("change-color");
             $(".download_content").removeClass("en_style");
             $(".mobile_download_content").removeClass("en_style");
             $('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
@@ -111,7 +111,7 @@
             $(".lang_en_btn").addClass("change-color");
             $(".download_content").addClass("en_style");
             $(".mobile_download_content").addClass("en_style");
-            $(".lang_cn_btn").removeClass("change-color").addClass("default-color");
+            $(".lang_zh_btn").removeClass("change-color").addClass("default-color");
             $('.phone_img').attr("src","resources/img/mobile_phone.png")
             changLang("en");
         }
@@ -130,6 +130,16 @@
             $("div.pc").show();
             $("div.phone").hide();
             $("#all").show();
+        }
+        window.onresize = function () {
+            $("#all").show();
+            if(window.innerWidth < 768){
+                $("div.pc").hide();
+                $("div.phone").show();
+            }else {
+                $("div.pc").show();
+                $("div.phone").hide();
+            }
         }
     });
     function changLang(currnetLang){
@@ -185,18 +195,18 @@
         changLang("en")
     });
 
-    $(".lang_cn_btn").on("touchstart",function () {
+    $(".lang_zh_btn").on("touchstart",function () {
 		$('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
         $(".lang_en_btn").removeClass("change-color");
-        $(".lang_cn_btn").addClass("change-color");
+        $(".lang_zh_btn").addClass("change-color");
         $(".mobile_download_content").removeClass("en_style");
         changLang("zh")
     });
 
     $(".lang_en_btn").on("touchstart",function () {
 		$('.phone_img').attr("src","resources/img/mobile_phone.png")
-        $(".lang_cn_btn").removeClass("change-color");
-        $(".lang_cn_btn").addClass("default-color");
+        $(".lang_zh_btn").removeClass("change-color");
+        $(".lang_zh_btn").addClass("default-color");
         $(".lang_en_btn").addClass("change-color");
         $(".mobile_download_content").addClass("en_style");
         changLang("en")
