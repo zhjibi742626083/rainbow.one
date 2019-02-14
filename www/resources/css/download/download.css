@@ -219,7 +219,7 @@ div.footer {
 .lang_block:hover{
     cursor: pointer ;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     padding: 0.04rem 0.12rem;
     font-size: 0.15rem;
     background: #fff;
@@ -440,7 +440,7 @@ p{
 .footer p{
     padding: 0.05rem 0 0.05rem 0;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     color: #3498DB;
 }
 .lang_zh_btn{

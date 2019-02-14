@@ -22,7 +22,7 @@
                 <div class="lang_block">
                     <span class="en_lang_btn" data-i18n-text="langEn"></span>
                     <span class="line"></span>
-                    <span class="ch_lang_btn" data-i18n-text="langZh"></span>
+                    <span class="zh_lang_btn" data-i18n-text="langZh"></span>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
         if(lang === "zh"){
             $('.content_wrap').css("background-image","url(resources/img/pc_background_phone.png)")
             $(".en_lang_btn").removeClass("change-color").addClass("default-color");
-            $(".ch_lang_btn").addClass("change-color");
+            $(".zh_lang_btn").addClass("change-color");
             $(".lang_en_btn").removeClass("change-color").addClass("default-color");
             $(".lang_zh_btn").addClass("change-color");
             $(".download_content").removeClass("en_style");
@@ -107,7 +107,7 @@
         }else {
             $('.content_wrap').css("background-image","url(resources/img/pc_background_phone_en.png)")
             $(".en_lang_btn").addClass("change-color");
-            $(".ch_lang_btn").removeClass("change-color").addClass("default-color");
+            $(".zh_lang_btn").removeClass("change-color").addClass("default-color");
             $(".lang_en_btn").addClass("change-color");
             $(".download_content").addClass("en_style");
             $(".mobile_download_content").addClass("en_style");
@@ -176,10 +176,10 @@
         $('.ios_content').removeClass("hide")
     })
 
-    $(".ch_lang_btn").click(function () {
+    $(".zh_lang_btn").click(function () {
         $('.content_wrap').css("background-image","url(resources/img/pc_background_phone.png)")
         $(".en_lang_btn").removeClass("change-color");
-        $(".ch_lang_btn").addClass("change-color");
+        $(".zh_lang_btn").addClass("change-color");
         $(".download_content").removeClass("en_style");
         $(".font-big").removeClass("hide-text");
         changLang("zh")
@@ -187,8 +187,8 @@
 
     $(".en_lang_btn").click(function () {
         $('.content_wrap').css("background-image","url(resources/img/pc_background_phone_en.png)")
-        $(".ch_lang_btn").removeClass("change-color");
-        $(".ch_lang_btn").addClass("default-color");
+        $(".zh_lang_btn").removeClass("change-color");
+        $(".zh_lang_btn").addClass("default-color");
         $(".en_lang_btn").addClass("change-color");
         $(".download_content").addClass("en_style");
         $(".font-big").addClass("hide-text");
