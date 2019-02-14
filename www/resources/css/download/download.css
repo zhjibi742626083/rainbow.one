@@ -149,8 +149,8 @@ div.footer {
 }
 .irisnet_link a{
     display: inline-block;
-    height: 0.35rem;
-    font-size: 0.35rem;
+    height: 2.6vw;
+    font-size: 2.6vw;
     line-height: 1;
     border-bottom: 0.02rem solid #fff;
     text-decoration:none;
@@ -219,7 +219,7 @@ div.footer {
 .lang_block:hover{
     cursor: pointer ;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     padding: 0.04rem 0.12rem;
     font-size: 0.15rem;
     background: #fff;
@@ -279,6 +279,9 @@ div.footer {
     padding: 0.02rem 0.1rem;
     border-radius: 0.26rem;
     color: #fff;
+}
+.lang_en_btn:hover{
+    cursor: pointer;
 }
 html{
     width: 100%;
@@ -437,15 +440,18 @@ p{
 .footer p{
     padding: 0.05rem 0 0.05rem 0;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     color: #3498DB;
 }
-.lang_cn_btn{
+.lang_zh_btn{
     padding: 0.02rem 0.1rem;
     border-radius: 0.26rem;
     font-size: 0.12rem;
     color: #3498DB;
     background: #fff;
+}
+.lang_zh_btn:hover{
+    cursor: pointer;
 }
 .default-color{
     color: #fff;
@@ -493,6 +499,14 @@ a:focus {
         font-size: 0.2rem;
         color: #fff;
     }
+    .irisnet_link a{
+        display: inline-block;
+        height: 0.2rem;
+        font-size: 0.2rem;
+        line-height: 1;
+        border-bottom: 0.02rem solid #fff;
+        text-decoration:none;
+    }
     .title_info{
         width: 60%;
         color: #fff;
@@ -508,6 +522,14 @@ a:focus {
     .title{
         font-size: 0.35rem;
         color: #fff;
+    }
+    .irisnet_link a{
+        display: inline-block;
+        height: 0.35rem;
+        font-size: 0.35rem;
+        line-height: 1;
+        border-bottom: 0.02rem solid #fff;
+        text-decoration:none;
     }
     .title_info{
         width: 60%;
