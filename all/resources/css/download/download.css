@@ -295,6 +295,9 @@ div.main {
     border-radius: 0.1rem;
     color: #fff;
 }
+.lang_en_btn:hover{
+    cursor: pointer;
+}
 html{
     width: 100%;
     height: 100%;
@@ -468,6 +471,9 @@ p{
     color: #3498DB;
     background: #fff;
     font-size: 0.12rem;
+}
+.lang_zh_btn:hover{
+    cursor: pointer;
 }
 .default-color{
     color: #fff;

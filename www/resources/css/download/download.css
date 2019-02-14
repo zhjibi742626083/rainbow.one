@@ -280,6 +280,9 @@ div.footer {
     border-radius: 0.26rem;
     color: #fff;
 }
+.lang_en_btn:hover{
+    cursor: pointer;
+}
 html{
     width: 100%;
     height: 100%;
@@ -446,6 +449,9 @@ p{
     font-size: 0.12rem;
     color: #3498DB;
     background: #fff;
+}
+.lang_zh_btn:hover{
+    cursor: pointer;
 }
 .default-color{
     color: #fff;

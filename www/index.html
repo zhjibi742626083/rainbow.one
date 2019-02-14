@@ -195,7 +195,7 @@
         changLang("en")
     });
 
-    $(".lang_zh_btn").on("touchstart",function () {
+    $(".lang_zh_btn").click(function () {
 		$('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
         $(".lang_en_btn").removeClass("change-color");
         $(".lang_zh_btn").addClass("change-color");
@@ -203,7 +203,7 @@
         changLang("zh")
     });
 
-    $(".lang_en_btn").on("touchstart",function () {
+    $(".lang_en_btn").click(function () {
 		$('.phone_img').attr("src","resources/img/mobile_phone.png")
         $(".lang_zh_btn").removeClass("change-color");
         $(".lang_zh_btn").addClass("default-color");
