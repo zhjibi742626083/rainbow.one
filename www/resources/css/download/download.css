@@ -1,42 +1,29 @@
-/**
- * css for download html
- */
+
 html {
-    font-size: 62.5%
+    font-size: 625%
 }
 
 body {
     color: white;
     font-family: "Microsoft YaHei UI", "serif","PingFang SC Regular","PingFang SC Bold";
-    font-size:1rem;
+    font-size:16px;
 
-    /*background-position: center;*/
 }
-/*@media screen  {*/
-/**/
-/*}*/
-
 div.download-pc {
-    /*color: white;*/
-    /*background-color: #0d85cb;*/
-    /*padding-bottom: 4%;*/
-    /*text-align: center;*/
-    width: 395px;
     margin: auto;
-    /*position: relative;*/
 }
 
 div.main {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url("../../img/rainbow-one-logo.jpg") no-repeat center center fixed;
+    background: url("../../img/backgroundImg.png") no-repeat center center fixed;
     background-size: cover;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-/*div.main div.qr, div.qr div p {*/
-/*margin-top: 4%;*/
-/*}*/
 
 div.footer {
     margin-top: 5%;
@@ -46,8 +33,49 @@ div.footer {
     display: inline-block;
 }
 
-.gray-font {
-    color: #737a8d;
+
+.download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.22rem;
+    font-size: 0.18rem;
+    height:0.22rem;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+    font-weight: 600;
+}
+.en_style .download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.19rem !important;
+    font-size: 0.18rem;
+    height:0.19rem!important;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+    font-weight: 600;
+}
+.experience{
+    margin-left: 0.02rem;
+    font-size: 0.18rem;
+}
+.download_link:hover{
+    color: #fff;
+}
+.mobile_download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.2rem;
+    height: 0.18rem;
+    font-size: 0.12rem;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+}
+.download_link_content.experience{
+    font-size: 0.12rem;
+    height: 0.2rem;
+}
+.en_lang_btn {
+    color: #fff;
 }
 
 .protocol-font {
@@ -67,7 +95,7 @@ div.footer {
     background: #4781ff;
     color: white;
     font-size: 1.5rem;
-    padding: 8px 0;
+    padding: 0.08rem 0;
 }
 
 .btn-download-ios {
@@ -77,184 +105,473 @@ div.footer {
     font-size: 1.5rem;
     padding: 8px 0;
 }
-.header-title{
-    height: 84px;
-    width: 68%;
+.header_wrap{
+    height: 0.84rem;
+    max-width: 12rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    line-height: 84px;
-    margin-left: 16%;
+    line-height: 0.84rem;
 }
-.container-fluid{
+.container_fluid{
     width: 100%;
 }
-.lang-block{
-    height: 54px;
-    line-height:54px;
+.header_logo{
+    padding-left: 0.2rem;
 }
-.header-logo{
+.header_logo img{
 }
-.font-container{
-    position: absolute;
-    top: 44%;
-    left: 48%;
-    color: #000;
+.font_container{
+    padding-top: 23vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+
+}
+.content_wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    background: url("../../img/pc_background_phone.png") no-repeat right;
+    background-size: auto 65%;
 }
 .title{
-    font-size: 26px;
-    color: #646466;
-}
-#font-big{
-    font-size: 35px;
-    color: #646466;
-}
-.title-info{
-    font-size: 26px;
-    color: #646466;
-}
-.lang-block{
-    color: #000;
+    padding-left: 0.2rem;
+    font-size: 2.6vw;
+    color: #fff;
     display: flex;
 }
-.lang-block:hover{
+.title a{
+    color: #fff;
+}
+.irisnet_link{
+    padding: 0 0.08rem;
+}
+.irisnet_link a{
+    display: inline-block;
+    height: 0.35rem;
+    font-size: 0.35rem;
+    line-height: 1;
+    border-bottom: 0.02rem solid #fff;
+    text-decoration:none;
+}
+.mobile_irisnet_link{
+    display: inline-block;
+    height: 0.22rem;
+    font-size: 0.14rem;
+    line-height: 0.22rem;
+    border-bottom: 0.01rem solid #fff;
+    text-decoration:none;
+}
+.wallet{
+    font-size: 0.16rem;
+}
+
+#font-big{
+    font-size: 2.6vw;
+    color: #fff;
+}
+.title_info{
+    width: 60%;
+    margin-left: 0.2rem;
+    font-size: 2vw;
+    color: #fff;
+}
+.download_content{
+    margin-top: 0.35rem;
+    display: flex;
+    margin-left: 0.2rem;
+    letter-spacing: 0.01rem;
+}
+.en_style{
+    flex-direction: column;
+}
+.en_style .download_link .experience{
+    margin-left: 0.08rem;
+}
+.download_content p{
+    font-size: 0.18rem;
+}
+.mobile_download_content{
+    margin-top: 0.24rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.12rem;
+}
+.en_style .mobile_download_link .mobile_link{
+    margin-right: 0.03rem;
+}
+.mobile_title{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.29rem;
+}
+.mobile_title a{
+    display: inline-block;
+    color: #fff;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    font-size: 0.16rem;
+}
+.lang_block{
+    color: #000;
+}
+.lang_block:hover{
     cursor: pointer ;
 }
-.ch-lang-btn{
-    line-height: 84px;
+.ch_lang_btn{
+    padding: 0.04rem 0.12rem;
+    font-size: 0.15rem;
+    background: #fff;
+    border-radius: 0.12rem;
 }
-.gray-font{
-    line-height: 84px;
+.en_lang_btn{
+    padding: 0.04rem 0.12rem;
+    font-size: 0.15rem;
+    border-radius: 0.12rem;
+    background: transparent;
 }
 .line{
-    height:  14px;
-    width: 1px;
-    background: #3599DC;
-    line-height: 84px;
-    margin: 35px 15px 0 15px;
+    display: inline-block;
+    height:  0.14rem;
+    width: 0.02rem;
+    background: #fff;
+    margin: 0.35rem 0.15rem 0 0.15rem;
 }
-.header-title-content{
-    border-bottom: 1px solid #aeaea2;
-}
-.footer-content{
+.header_container{
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    height: 84px;
-    border-top: 1px solid #a2a2ae;
-    line-height: 84px;
+}
+.footer_content{
+    height: 0.4rem;
+    width: 100%;
     color: #000;
 }
-.footer-bottom-content{
-    width: 68%;
+.footer_bottom_content{
+    margin: 0 auto;
+    max-width: 12rem;
     display: flex;
     justify-content: space-between;
-    margin-left: 16%;
 }
-.copyright-content{
-    color: #A2A2AE;
+.copyright_content{
+    color: #fff;
+    margin: 0 auto;
 }
-.privacy-content a{
-    color: #3599DC;
+.privacy_content{
+    margin-left: 0.2rem;
+}
+.privacy_content a{
+    color: #fff;
     display: inline-block;
 }
-.bottom-line{
-    margin: 0 15px;
+.bottom_line{
+    color: #fff;
+    margin: 0 0.15rem;
 }
 .public-beta-font{
-    color: #717679;
-    font-size: 20px;
-    padding-top: 58px;
+    color: #fff;
+    font-size: 0.2rem;
+    padding-top: 0.58rem;
+    padding-left: 0.2rem;
 }
-.mobile-content{
+
+.lang_en_btn{
+    font-size: 0.12rem;
+    padding: 0.02rem 0.1rem;
+    border-radius: 0.26rem;
+    color: #fff;
+}
+html{
     width: 100%;
     height: 100%;
 }
-.mobile-img-logo{
+body{
     width: 100%;
     height: 100%;
 }
-.mobile-img-logo img{
+#all{
     width: 100%;
+    height: 100%;
 }
-.font-content{
+.phone{
+    height: 100%;
+    background: url("../../img/mobile_background.png") no-repeat center center fixed;
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+.mobile_header_logo{
     width: 100%;
+    height: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.mobile_header_logo img{
+    width: 1.2rem;
+    height: 0.3rem;
+}
+.mobile_content{
+    padding: 0.21rem 0.2rem 0 0.2rem;
+    width: 100%;
+    height: 100%;
+}
+.mobile_img_logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mobile_ios_content{
+    width: 80%;
+    margin: 0.2rem auto;
+    border-radius: 0.06rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    background: #fff;
+}
+.mobile_android_content{
+    width: 80%;
+    margin: 0.2rem auto;
+    border-radius: 0.06rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    background: #fff;
+}
+.mobile_download_ios_content{
+    margin: 0 auto;
+}
+.ios_logo{
+    padding-left: 0.02rem;
+    height: 0.2rem;
+}
+.mobile_android_logo{
+    height: 0.2rem;
+}
+.mobile_line{
+    display: inline-block;
+    height: 0.14rem;
+    width: 0.01rem;
+    background: #fff;
+    margin: 0.02rem 0.05rem 0 0.05rem;
+}
+.mobile_lang_content {
+    display: flex;
+    align-items: center;
+}
+.android{
+    color: #3498DB;
+    font-size: 0.12rem;
+    width: 0.46rem;
     text-align: center;
-    position: absolute;
-    top: 58%;
 }
-.font-content h5{
+.ios{
+    width: 0.46rem;
+    color: #3498DB;
+    font-size: 0.12rem;
+    text-align: center;
+}
+.font_content{
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.font_content h5{
     margin: 0;
     padding: 0;
-    font-size: 52px;
+    font-size: 0.22rem;
     font-weight: 900;
     background-image: -webkit-linear-gradient(left, #3498DB, #62B5ED);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .lang-content{
-    position: absolute;
-    top: 4%;
     color: #000;
-    width: 100%;
     text-align: right;
-    padding-right: 18px;
+    padding-top: 0.02rem;
 }
 .lang-content span:nth-child(1){
-    padding-right: 24px;
+    text-align: center;
+    padding: 0.02rem 0.05rem;
+    border-radius: 0.09rem;
 }
-.info-title{
+.lang-content span:nth-child(2){
+    text-align: center;
+    padding: 0.02rem 0.05rem;
+    border-radius: 0.09rem;
+}
+p{
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    padding-top: 8px;
-    color: #646466;
-    margin: 0 20px;
 }
-.info-title-client{
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    padding-top: 8px;
-    color: #646466;
-    margin: 0 20px;
+.mobile_irisnet_link{
+    font-size: 0.18rem;
+    color: #fff;
+    margin: 0 0.05rem;
+}
+.info_title_client{
+    font-size: 0.16rem;
+    color: #fff;
 }
 .public-beta-title{
-    font-size: 12px;
+    font-size: 0.12rem;
     color: #717679;
     margin: 0;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 0.3rem;
 }
 .footer{
     width: 100%;
-    position: fixed;
+    left: 0;
     text-align: center;
     bottom: 0;
 }
 .footer a{
-    color: #3498DB;
+    color: #fff;
 }
-.mobile-bottom-line{
-    padding: 0 16px;
+.mobile_bottom_line{
+    font-size: 0.12rem;
+    padding: 0 0.05rem;
+    color: #fff;
 }
 .footer p{
-    padding: 10px 0 10px 0;
+    padding: 0.05rem 0 0.05rem 0;
 }
-.ch-lang-btn{
+.ch_lang_btn{
     color: #3498DB;
 }
-.lang-cn-btn{
+.lang_cn_btn{
+    padding: 0.02rem 0.1rem;
+    border-radius: 0.26rem;
+    font-size: 0.12rem;
     color: #3498DB;
+    background: #fff;
 }
 .default-color{
-    color: #737a8d;
+    color: #fff;
+    background: transparent;
 }
 .change-color{
     color: #3498DB;
+    background: #fff;
+
 }
 .hide-text{
     display: none;
 }
 a:focus {
     outline: none;
+}
+.terms_link{
+    font-size: 0.12rem;
+    padding: 0;
+}
+.content_container{
+    flex: 1;
+
+}
+.bottom_copyright{
+    font-size: 0.12rem;
+    color: #fff;
+}
+.privacy_link{
+    font-size: 0.12rem;
+    color: #fff;
+}
+
+
+@media screen and (max-height: 500px){
+    .font_container{
+        padding-top: 0;
+        max-width: 12rem;
+        margin: 0 auto;
+        color: #fff;
+    }
+}
+@media screen and (max-width: 900px){
+    .title{
+        font-size: 0.2rem;
+        color: #fff;
+    }
+    .title_info{
+        width: 60%;
+        color: #fff;
+        font-size: 0.17rem;
+    }
+    #font-big{
+        font-size: 0.2rem;
+        color: #fff;
+    }
+
+}
+@media screen and (min-width: 1366px){
+    .title{
+        font-size: 0.35rem;
+        color: #fff;
+    }
+    .title_info{
+        width: 60%;
+        color: #fff;
+        font-size: 0.28rem;
+    }
+    #font-big{
+        font-size: 0.28rem;
+        color: #fff;
+    }
+}
+@media screen and (max-width: 900px){
+    .qr_content{
+        z-index: 1000;
+    }
+    .download_content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ios_content{
+        z-index: 1;
+        margin-top: 0.3rem;
+        margin-left: 0;
+    }
+    .android_content:hover.qr_content{
+        z-index: 10;
+    }
+    .android_content{
+        width: 1.4rem;
+    }
+
+}
+.mobile_download_android_content{
+    box-sizing: border-box;
+    padding: 0 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile_download_ios_content{
+    box-sizing: border-box;
+    padding: 0 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile_phone_img{
+    width: 35%;
+    margin: 0 auto;
+}
+.mobile_phone_img{
+    width: 100%;
+}
+.mobile_img{
+    padding-top: 0.45rem;
+    width: 70%;
+    margin: 0 auto;
+}
+.mobile_img img{
+    width: 100%;
+}
+.comming_soon{
+    font-size: 0.12rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
 }

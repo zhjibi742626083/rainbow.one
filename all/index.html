@@ -13,95 +13,141 @@
 </head>
 <body>
 
-<div id="all" class="container-fluid" hidden="hidden">
-    <div class="row main pc">
-        <div class="row center">
-            <image src="./resources/img/banner.jpg"/>
-            <div style="position: absolute;z-indent:2;left:0;top: 30px; width: 100%">
-                <span style="float: left; vertical-align: bottom">
-                    <image src="./resources/img/logo.png"/>
-                </span>
-                <span style="float: right; vertical-align: bottom; height: 54px; line-height:54px;">
-                    中文&nbsp;&nbsp;
-                    <image style="display:inline" src="./resources/img/CH&EN-dot.png"/>
-                    <span class="gray-font">&nbsp;&nbsp;English</span>
-                </span>
+<div id="all" class="container_fluid" hidden="hidden">
+    <div class="main pc">
+        <div class="header_container">
+            <div class="header_wrap">
+                <div class="header_logo">
+                    <img src="./resources/img/rainbowlogo.png"/>
+                </div>
+                <div class="lang_block">
+                    <span class="ch_lang_btn" data-i18n-text="langZh"></span>
+                    <span class="line"></span>
+                    <span class="en_lang_btn" data-i18n-text="langEn"></span>
+                </div>
+            </div>
+        </div>
+        <div class="content_container">
+            <div class="content_wrap">
+                <div class="font_container">
+                    <div class="title">
+                        <p id="title_first" data-i18n-text="titleFirst"></p>
+                    </div>
+                    <p class="title_info" data-i18n-text="titleInfo"></p>
+                    <div class="download_content">
+                        <div class="android_content">
+                            <div class="download_android_content">
+                                <img class="android_logo" src="resources/img/android_logo.png">
+                                <span data-i18n-text="android"></span>
+                                <img class="qr_img" src="resources/img/qr_logo.png">
+                            </div>
+                            <div class="qr_content">
+                                <img class="qr_download_img" src="env/${env}/download_android.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="ios_content">
+                            <div class="download_ios_content">
+                                <img class="ios_logo" src="resources/img/ios_logo.png">
+                                <span data-i18n-text="ios"></span>
+                                <img class="qr_img" src="resources/img/qr_logo.png">
+                            </div>
+                            <div class="ios_qr_content">
+                                <img class="ios_qr_download_img" src="env/${env}/download_ios.jpg">
+                                <p class="setting_content" data-i18n-text="iOSSetting"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_content">
+            <div class="footer_bottom_content">
+                <div class="privacy_content">
+                    <a class="privacy_link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
+                    <span class="bottom_line">|</span>
+                    <a class="terms_link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
+                </div>
+                <div class="copyright_content"><span data-i18n-text="copyrightContent"></span></div>
             </div>
         </div>
     </div>
-    <div class="row phone" style="text-align: center">
-        <image src="./resources/img/phone_banner.jpg" width="100%"/>
-        <div style="position: absolute;z-indent:2;left:0;top: 30px; width: 100%">
-            <span style="float: right; vertical-align: bottom; margin-right: 5%">
-                中文&nbsp;&nbsp;
-                <image style="display:inline" src="./resources/img/CH&EN-dot.png"/>
-                <span class="gray-font">&nbsp;&nbsp;English</span>
-            </span>
-        </div>
-        <image src="./resources/img/phone_logo.png" width="28%"/>
-        <p style="color: #4781ff; padding-top: 3%; font-size: 2rem">首款为 IRIS 网络打造的数字钱包</p>
-    </div>
-    <div class="row center pc">
-        <div class="row download-pc">
-            <div style="float: left;">
-                <img alt="140x140"
-                     class="qr-android"
-                     src="./resources/img/download-android.png"/>
-                <p class="text-center download-font" style="padding-top: 20px;">Android 下载</p>
-            </div>
+    <div class="phone">
+        <div class="mobile_content">
+            <div class="mobile_img_logo">
+                <div class="mobile_header_logo">
+                    <img src="resources/img/mobile_logo.png">
+                    <div class="mobile_lang_content">
+                        <span class="lang_cn_btn" data-i18n-text="langZh"></span>
+                        <span class="mobile_line"></span>
+                        <span class="lang_en_btn" data-i18n-text="langEn"></span>
+                    </div>
+                </div>
 
-            <div style="float: right;">
-                <img alt="140x140"
-                     class="qr-ios"
-                     src="./resources/img/download-ios.png"/>
-                <p class="text-center download-font" style="padding-top: 20px;">iOS 下载</p>
-            </div>
-        </div>
-        <div style="margin:0 20px;color:#737a8d;font-size: 12px;padding-top: 20px;">为避免兼容性问题影响使用，请卸载历史版本App，安装最新版本.</div>
-        <div class="gray-font">iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
-    </div>
-    <div class="row phone" style="text-align: center; padding-top: 3%;">
-        <button class="btn btn btn-primary btn-download-android"
-                onclick="window.location.href='https://d.rainbowinstaller.cn/${env}/rainbow-latest.apk'">Android 下载
-        </button>
-        <div style="padding-top: 3%">
-            <button class="btn btn btn-primary btn-download-ios"
-                    onclick="window.location.href='itms-services://?action=download-manifest&url=https://d.rainbowinstaller.cn/${env}/rainbow.plist'">
-                iOS 下载
-            </button>
-        </div>
-        <div style="margin:0 20px;color:#737a8d;font-size: 12px;padding-top: 2%;">为避免兼容性问题影响使用，请卸载历史版本App，安装最新版本.iOS系统安装后必须在设置→通用→设备管理中选择信任</div>
-    </div>
-</div>
-</div>
-<footer class="footer navbar-fixed-bottom" style="background-color: #f3f3f3; border: 1px solid #d5d5d6;position: static">
-    <div class="container">
-        <div class="row center pc" style="padding: 20px 0">
-            <div style="float: left; color: #0f0f0f">
-                <a href="./service_agreement.html" target="_blank">服务协议</a> |
-                <a href="./privacy.html" target="_blank">隐私条款</a>
-            </div>
-            <div class="download-font" style="float: right;">
-                版权所有 © 2018上海边界智能科技有限公司
-            </div>
-        </div>
-        <div class="row phone" style="padding: 20px 0; text-align: center;color: #0f0f0f">
-            <div style="color: #0f0f0f">
-                <a href="./service_agreement.html" target="_blank">服务协议</a> |
-                <a href="./privacy.html" target="_blank">隐私条款</a>
-            </div>
-            <div class="download-font-phone">
-                版权所有 © 2018上海边界智能科技有限公司
+                <div class="font_content">
+                    <div>
+                        <div class="mobile_phone_img">
+                            <img class="phone_img" src="resources/img/mobile_phone_zh.png">
+                        </div>
+                        <p class="info_title" data-i18n-text="mobileTitleFirst"></p>
+                        <p class="info_title_client" data-i18n-text="mobileClient"></p>
+                        <div>
+                            <div class="mobile_android_content">
+                                <div class="mobile_download_android_content" onclick="window.location.href='https://d.rainbowinstaller.cn/testnet/rainbow-latest.apk'">
+                                    <img class="mobile_android_logo" src="resources/img/android_logo.png">
+                                    <span class="android" data-i18n-text="android"></span>
+                                </div>
+                                <div class="qr_content">
+                                    <img class="qr_download_img" src="env/${env}/download_android.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="mobile_ios_content">
+                                <div class="mobile_download_ios_content" onclick="window.location.href='itms-services://?action=download-manifest&url=https://d.rainbowinstaller.cn/${env}/rainbow.plist'">
+                                    <img class="ios_logo" src="resources/img/ios_logo.png">
+                                    <span class="ios" data-i18n-text="ios"></span>
+                                </div>
+                                <p class="mobile_setting_content" data-i18n-text="iOSSetting"></p>
+                                <div class="ios_qr_content">
+                                    <img class="ios_qr_download_img" src="env/${env}/download_ios.jpg">
+                                    <p class="setting_content" data-i18n-text="iOSSetting"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <a class="privacy_link" href="./service_agreement.html" target="_blank" data-i18n-text="privacyLink"></a>
+                        <span class="mobile_bottom_line">|</span>
+                        <a class="terms_link" href="./privacy.html" target="_blank" data-i18n-text="termsLink"></a>
+                        <p class="bottom_copyright" data-i18n-text="copyrightContent"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</footer>
 </div>
-
 <script src="./resources/js/jquery.min.js"></script>
+<script src="./resources/js/jquery.i18n.properties-min.js"></script>
 <script type="application/javascript">
     $(document).ready(function () {
         var ua = navigator.userAgent;
+        var lang = navigator.language || navigator.userLanguage;
+        lang = lang.substr(0,2).toLowerCase();
+        if(lang === "zh"){
+            $('.content_wrap').css("background-image","url(resources/img/pc_background_phone.png)")
+            $(".en_lang_btn").removeClass("change-color").addClass("default-color");
+            $(".ch_lang_btn").addClass("change-color");
+            $(".lang_en_btn").removeClass("change-color").addClass("default-color");
+            $(".lang_cn_btn").addClass("change-color");
+            $('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
+            changLang("zh");
+        }else {
+            $('.content_wrap').css("background-image","url(resources/img/pc_background_phone_en.png)")
+            $(".en_lang_btn").addClass("change-color");
+            $(".ch_lang_btn").removeClass("change-color").addClass("default-color");
+            $(".lang_en_btn").addClass("change-color");
+            $(".lang_cn_btn").removeClass("change-color").addClass("default-color");
+            $('.phone_img').attr("src","resources/img/mobile_phone.png")
+            changLang("en");
+        }
 
         var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
             isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
@@ -112,11 +158,77 @@
             $("div.pc").hide();
             $("div.phone").show();
             $("#all").show();
+
         } else {
             $("div.pc").show();
             $("div.phone").hide();
             $("#all").show();
         }
+    });
+    function changLang(currnetLang){
+        $.i18n.properties({
+            name:currnetLang,
+            path:"./resources/i18n/",
+            mode:"map",
+            language:currnetLang,
+            callback:function () {
+                try {
+                    $('[data-i18n-text]').each(function () {
+                        var html = $(this).html();
+                        var reg = /<(.*)>/;
+                        if(reg.test(html)){
+                            var htmlValue = reg.exec(html)[0];
+                            $(this).html(htmlValue + $.i18n.prop($(this).data('i18n-text')))
+                        }else {
+                            $(this).text($.i18n.prop($(this).data('i18n-text')));
+                        }
+                    })
+                }
+                catch (e) {
+
+                }
+            }
+        });
+    };
+
+    $('.android_content').hover(function () {
+        if(window.innerWidth < 900){
+            $('.ios_content').addClass("hide")
+        }
+    },function () {
+        $('.ios_content').removeClass("hide")
+    })
+
+    $(".ch_lang_btn").click(function () {
+        $('.content_wrap').css("background-image","url(resources/img/pc_background_phone.png)")
+        $(".en_lang_btn").removeClass("change-color");
+        $(".ch_lang_btn").addClass("change-color");
+        $(".font-big").removeClass("hide-text");
+        changLang("zh")
+    });
+
+    $(".en_lang_btn").click(function () {
+        $('.content_wrap').css("background-image","url(resources/img/pc_background_phone_en.png)")
+        $(".ch_lang_btn").removeClass("change-color");
+        $(".ch_lang_btn").addClass("default-color");
+        $(".en_lang_btn").addClass("change-color");
+        $(".font-big").addClass("hide-text");
+        changLang("en")
+    });
+
+    $(".lang_cn_btn").on("touchstart",function () {
+		$('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
+        $(".lang_en_btn").removeClass("change-color");
+        $(".lang_cn_btn").addClass("change-color");
+        changLang("zh")
+    });
+
+    $(".lang_en_btn").on("touchstart",function () {
+		$('.phone_img').attr("src","resources/img/mobile_phone.png")
+		$(".lang_cn_btn").removeClass("change-color");
+        $(".lang_cn_btn").addClass("default-color");
+        $(".lang_en_btn").addClass("change-color");
+        changLang("en")
     })
 </script>
 </body>
