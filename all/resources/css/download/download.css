@@ -61,6 +61,7 @@ div.main {
 .header_wrap{
     height: 0.84rem;
     max-width: 12rem;
+    min-width: 9rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -75,8 +76,8 @@ div.main {
 .header_logo img{
 }
 .font_container{
-    padding-top: 16vh;
-    max-width: 12rem;
+    padding-top: 25vh;
+    width: 7rem;
     margin: 0 auto;
     color: #fff;
 }
@@ -84,19 +85,28 @@ div.main {
     max-width: 12rem;
     margin: 0 auto;
     height: 100%;
-    background: url("../../img/pc_background_phone.png") no-repeat right;
-    background-size: auto 100%;
+    min-width: 9.5rem;
+    display: flex;
+    /*background: url("../../img/pc_background_phone.png") no-repeat right;*/
+    /*background-size: auto 100%;*/
+}
+.phone_img_content{
+    width: 40%;
+    padding-right: 0.2rem;
+}
+.phone_img_content img{
+    width: 100%;
 }
 .title{
     display: flex;
     padding-left: 0.2rem;
-    font-size: 2.6vw;
+    font-size: 0.35rem;
     color: #fff;
 }
 .title a{
     display: inline-block;
-    height: 2.6vw;
-    font-size: 2.6vw;
+    height: 0.35rem;
+    font-size: 0.35rem;
     line-height: 1;
     border-bottom: 0.02rem solid #fff;
     text-decoration: none;
@@ -110,9 +120,8 @@ div.main {
     color: #fff;
 }
 .title_info{
-    width: 60%;
     margin-left: 0.2rem;
-    font-size: 2vw;
+    font-size: 0.26rem;
     color: #fff;
 }
 .download_content{
@@ -228,6 +237,7 @@ div.main {
 }
 .lang_block{
     color: #000;
+    padding-right: 0.2rem;
 }
 .lang_block:hover{
     cursor: pointer ;
@@ -258,6 +268,7 @@ div.main {
 .footer_content{
     height: 0.4rem;
     width: 100%;
+    min-width: 9rem;
     color: #000;
 }
 .footer_bottom_content{
@@ -496,7 +507,7 @@ a:focus {
 }
 .content_container{
     flex: 1;
-
+    min-width: 9rem;
 }
 .bottom_copyright{
     font-size: 0.12rem;
@@ -505,86 +516,6 @@ a:focus {
 .privacy_link{
     font-size: 0.12rem;
     color: #fff;
-}
-@media screen and (max-height: 500px){
-    .font_container{
-        padding-top: 0;
-        max-width: 12rem;
-        margin: 0 auto;
-        color: #fff;
-    }
-}
-@media screen and (max-width: 900px){
-    .title{
-        padding-left: 0.2rem;
-        font-size: 0.2rem;
-        color: #fff;
-    }
-    .title a{
-        display: inline-block;
-        height: 0.2rem;
-        font-size: 0.2rem;
-        line-height: 1;
-        border-bottom: 0.02rem solid #fff;
-        text-decoration: none;
-        color: #fff;
-    }
-    .title_info{
-        width: 60%;
-        color: #fff;
-        font-size: 0.17rem;
-    }
-    #font-big{
-        font-size: 0.2rem;
-        color: #fff;
-    }
-}
-@media screen and (min-width: 1366px){
-    .title{
-        padding-left: 0.2rem;
-        font-size: 0.35rem;
-        color: #fff;
-    }
-    .title a{
-        display: inline-block;
-        height: 0.35rem;
-        font-size: 0.35rem;
-        line-height: 1;
-        border-bottom: 0.02rem solid #fff;
-        text-decoration: none;
-        color: #fff;
-    }
-    .title_info{
-        width: 60%;
-        color: #fff;
-        font-size: 0.28rem;
-    }
-    #font-big{
-        font-size: 0.35rem;
-        color: #fff;
-    }
-}
-@media screen and (max-width: 900px){
-    .qr_content{
-        z-index: 1000;
-    }
-    .download_content{
-        display: flex;
-        flex-direction: column;
-        height: 2.3rem;
-    }
-
-    .ios_content{
-        z-index: 1;
-        margin-top: 0.3rem;
-        margin-left: 0;
-    }
-    .android_content:hover.qr_content{
-        z-index: 10;
-    }
-    .android_content{
-        width: 1.4rem;
-    }
 }
 .mobile_download_android_content{
     box-sizing: border-box;
