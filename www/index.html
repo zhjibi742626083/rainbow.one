@@ -38,6 +38,9 @@
                         <span class="download_link"><span data-i18n-text="also"></span> <a href="https://testnet.rainbow.one/" target="_blank" data-i18n-text="downloadWallet"></a><span class="experience" data-i18n-text="experience"></span> </span>
                     </div>
                 </div>
+                <div class="phone_img_content">
+                    <img class="pc_phone_img">
+                </div>
             </div>
         </div>
         <div class="footer_content">
@@ -95,7 +98,7 @@
         var lang = navigator.language || navigator.userLanguage;
         lang = lang.substr(0,2);
         if(lang === "zh"){
-            $('.content_wrap').css("background-image","url(resources/img/pc_background_phone.png)")
+            $('.pc_phone_img').attr("src","resources/img/pc_background_phone.png")
             $(".en_lang_btn").removeClass("change-color").addClass("default-color");
             $(".zh_lang_btn").addClass("change-color");
             $(".lang_en_btn").removeClass("change-color").addClass("default-color");
@@ -105,7 +108,7 @@
             $('.phone_img').attr("src","resources/img/mobile_phone_zh.png")
             changLang("zh");
         }else {
-            $('.content_wrap').css("background-image","url(resources/img/pc_background_phone_en.png)")
+            $('.pc_phone_img').attr("src","resources/img/pc_background_phone_en.png")
             $(".en_lang_btn").addClass("change-color");
             $(".zh_lang_btn").removeClass("change-color").addClass("default-color");
             $(".lang_en_btn").addClass("change-color");
@@ -130,16 +133,6 @@
             $("div.pc").show();
             $("div.phone").hide();
             $("#all").show();
-        }
-        window.onresize = function () {
-            $("#all").show();
-            if(window.innerWidth < 768){
-                $("div.pc").hide();
-                $("div.phone").show();
-            }else {
-                $("div.pc").show();
-                $("div.phone").hide();
-            }
         }
     });
     function changLang(currnetLang){
@@ -177,7 +170,7 @@
     })
 
     $(".zh_lang_btn").click(function () {
-        $('.content_wrap').css("background-image","url(resources/img/pc_background_phone.png)")
+        $('.pc_phone_img').attr("src","resources/img/pc_background_phone.png")
         $(".en_lang_btn").removeClass("change-color");
         $(".zh_lang_btn").addClass("change-color");
         $(".download_content").removeClass("en_style");
@@ -186,7 +179,7 @@
     });
 
     $(".en_lang_btn").click(function () {
-        $('.content_wrap').css("background-image","url(resources/img/pc_background_phone_en.png)")
+        $('.pc_phone_img').attr("src","resources/img/pc_background_phone_en.png")
         $(".zh_lang_btn").removeClass("change-color");
         $(".zh_lang_btn").addClass("default-color");
         $(".en_lang_btn").addClass("change-color");
