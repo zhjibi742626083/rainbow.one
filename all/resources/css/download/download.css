@@ -88,11 +88,23 @@ div.main {
     background-size: auto 100%;
 }
 .title{
+    display: flex;
     padding-left: 0.2rem;
     font-size: 2.6vw;
     color: #fff;
 }
-
+.title a{
+    display: inline-block;
+    height: 2.6vw;
+    font-size: 2.6vw;
+    line-height: 1;
+    border-bottom: 0.02rem solid #fff;
+    text-decoration: none;
+    color: #fff;
+}
+.irisnet_link{
+    padding: 0 0.08rem;
+}
 #font-big{
     font-size: 2.6vw;
     color: #fff;
@@ -220,7 +232,7 @@ div.main {
 .lang_block:hover{
     cursor: pointer ;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     padding: 0.04rem 0.12rem;
     font-size: 0.15rem;
     background: #fff;
@@ -282,6 +294,9 @@ div.main {
     padding: 0.02rem 0.1rem;
     border-radius: 0.1rem;
     color: #fff;
+}
+.lang_en_btn:hover{
+    cursor: pointer;
 }
 html{
     width: 100%;
@@ -447,15 +462,18 @@ p{
 .footer p{
     padding: 0.05rem 0 0.05rem 0;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     color: #3498DB;
 }
-.lang_cn_btn{
+.lang_zh_btn{
     padding: 0.02rem 0.1rem;
     border-radius: 0.1rem;
     color: #3498DB;
     background: #fff;
     font-size: 0.12rem;
+}
+.lang_zh_btn:hover{
+    cursor: pointer;
 }
 .default-color{
     color: #fff;
@@ -502,6 +520,15 @@ a:focus {
         font-size: 0.2rem;
         color: #fff;
     }
+    .title a{
+        display: inline-block;
+        height: 0.2rem;
+        font-size: 0.2rem;
+        line-height: 1;
+        border-bottom: 0.02rem solid #fff;
+        text-decoration: none;
+        color: #fff;
+    }
     .title_info{
         width: 60%;
         color: #fff;
@@ -511,14 +538,20 @@ a:focus {
         font-size: 0.2rem;
         color: #fff;
     }
-    #title_first{
-        margin-right: 50%;
-    }
 }
 @media screen and (min-width: 1366px){
     .title{
         padding-left: 0.2rem;
         font-size: 0.35rem;
+        color: #fff;
+    }
+    .title a{
+        display: inline-block;
+        height: 0.35rem;
+        font-size: 0.35rem;
+        line-height: 1;
+        border-bottom: 0.02rem solid #fff;
+        text-decoration: none;
         color: #fff;
     }
     .title_info{
@@ -576,4 +609,12 @@ a:focus {
 }
 .qr_img{
     height: 0.16rem;
+}
+.mobile_link_content{
+    display: flex;
+    justify-content: center;
+}
+.mobile_link_content a{
+    color: #fff;
+    text-decoration: underline;
 }
