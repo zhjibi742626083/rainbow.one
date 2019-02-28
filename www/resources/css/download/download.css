@@ -33,6 +33,47 @@ div.footer {
     display: inline-block;
 }
 
+
+.download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.22rem;
+    font-size: 0.18rem;
+    height:0.22rem;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+    font-weight: 600;
+}
+.en_style .download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.19rem !important;
+    font-size: 0.18rem;
+    height:0.19rem!important;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+    font-weight: 600;
+}
+.experience{
+    margin-left: 0.02rem;
+    font-size: 0.18rem;
+}
+.download_link:hover{
+    color: #fff;
+}
+.mobile_download_link a{
+    display: inline-block;
+    color: #fff;
+    line-height: 0.2rem;
+    height: 0.18rem;
+    font-size: 0.12rem;
+    text-decoration:none;
+    border-bottom: 0.01rem solid #fff;
+}
+.download_link_content.experience{
+    font-size: 0.12rem;
+    height: 0.2rem;
+}
 .en_lang_btn {
     color: #fff;
 }
@@ -67,6 +108,7 @@ div.footer {
 .header_wrap{
     height: 0.84rem;
     max-width: 12rem;
+    min-width: 9rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -81,23 +123,56 @@ div.footer {
 .header_logo img{
 }
 .font_container{
-    padding-top: 19vh;
-    max-width: 1200px;
+    padding-top: 23vh;
+    width: 12rem;
     margin: 0 auto;
     color: #fff;
 
 }
 .content_wrap{
-    max-width: 1200px;
+    max-width: 12rem;
     margin: 0 auto;
     height: 100%;
-    background: url("../../img/pc_background_phone.png") no-repeat right;
-    background-size: auto 100%;
+    min-width: 11rem;
+    display: flex;
+}
+.phone_img_content{
+    padding-right: 0.2rem;
+    padding-top: 10vh;
+    width: 70%;
+}
+.phone_img_content img{
+    width: 100%;
 }
 .title{
     padding-left: 0.2rem;
-    font-size: 2.6vw;
+    font-size: 0.35rem;
     color: #fff;
+    display: flex;
+}
+.title a{
+    color: #fff;
+}
+.irisnet_link{
+    padding: 0 0.08rem;
+}
+.irisnet_link a{
+    display: inline-block;
+    font-size: 0.35rem;
+    line-height: 1;
+    border-bottom: 0.02rem solid #fff;
+    text-decoration:none;
+}
+.mobile_irisnet_link{
+    display: inline-block;
+    height: 0.22rem;
+    font-size: 0.14rem;
+    line-height: 0.22rem;
+    border-bottom: 0.01rem solid #fff;
+    text-decoration:none;
+}
+.wallet{
+    font-size: 0.16rem;
 }
 
 #font-big{
@@ -105,27 +180,54 @@ div.footer {
     color: #fff;
 }
 .title_info{
-    width: 60%;
     margin-left: 0.2rem;
-    font-size: 2vw;
+    font-size: 0.28rem;
     color: #fff;
 }
 .download_content{
-    margin-top: 0.5rem;
+    margin-top: 0.35rem;
     display: flex;
     margin-left: 0.2rem;
+    letter-spacing: 0.01rem;
+}
+.en_style{
+    flex-direction: column;
+}
+.en_style .download_link .experience{
+    margin-left: 0.08rem;
 }
 .download_content p{
-    font-size: 0.2rem;
+    font-size: 0.18rem;
 }
-
+.mobile_download_content{
+    margin-top: 0.24rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.12rem;
+}
+.en_style .mobile_download_link .mobile_link{
+    margin-right: 0.03rem;
+}
+.mobile_title{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.29rem;
+}
+.mobile_title a{
+    display: inline-block;
+    color: #fff;
+    height: 0.22rem;
+    line-height: 0.22rem;
+    font-size: 0.16rem;
+}
 .lang_block{
+    padding-right: 0.2rem;
     color: #000;
 }
 .lang_block:hover{
     cursor: pointer ;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     padding: 0.04rem 0.12rem;
     font-size: 0.15rem;
     background: #fff;
@@ -150,6 +252,7 @@ div.footer {
 .footer_content{
     height: 0.4rem;
     width: 100%;
+    min-width: 9rem;
     color: #000;
 }
 .footer_bottom_content{
@@ -186,6 +289,9 @@ div.footer {
     border-radius: 0.26rem;
     color: #fff;
 }
+.lang_en_btn:hover{
+    cursor: pointer;
+}
 html{
     width: 100%;
     height: 100%;
@@ -218,6 +324,7 @@ body{
 .mobile_content{
     padding: 0.21rem 0.2rem 0 0.2rem;
     width: 100%;
+    min-width: 3rem;
     height: 100%;
 }
 .mobile_img_logo{
@@ -278,7 +385,6 @@ body{
 .font_content{
     flex: 1;
     text-align: center;
-    padding-top: 0.25rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -311,10 +417,10 @@ p{
     margin: 0;
     padding: 0;
 }
-.info_title{
-    padding-top: 0.18rem;
+.mobile_irisnet_link{
     font-size: 0.18rem;
     color: #fff;
+    margin: 0 0.05rem;
 }
 .info_title_client{
     font-size: 0.16rem;
@@ -344,15 +450,18 @@ p{
 .footer p{
     padding: 0.05rem 0 0.05rem 0;
 }
-.ch_lang_btn{
+.zh_lang_btn{
     color: #3498DB;
 }
-.lang_cn_btn{
+.lang_zh_btn{
     padding: 0.02rem 0.1rem;
     border-radius: 0.26rem;
     font-size: 0.12rem;
     color: #3498DB;
     background: #fff;
+}
+.lang_zh_btn:hover{
+    cursor: pointer;
 }
 .default-color{
     color: #fff;
@@ -375,7 +484,7 @@ a:focus {
 }
 .content_container{
     flex: 1;
-
+    min-width: 9rem;
 }
 .bottom_copyright{
     font-size: 0.12rem;
@@ -384,71 +493,6 @@ a:focus {
 .privacy_link{
     font-size: 0.12rem;
     color: #fff;
-}
-
-
-@media screen and (max-height: 500px){
-    .font_container{
-        padding-top: 0;
-        max-width: 12rem;
-        margin: 0 auto;
-        color: #fff;
-    }
-}
-@media screen and (max-width: 900px){
-    .title{
-        font-size: 0.2rem;
-        color: #fff;
-    }
-    .title_info{
-        width: 60%;
-        color: #fff;
-        font-size: 0.17rem;
-    }
-    #font-big{
-        font-size: 0.2rem;
-        color: #fff;
-    }
-    #title_first{
-        margin-right: 50%;
-    }
-}
-@media screen and (min-width: 1366px){
-    .title{
-        font-size: 0.35rem;
-        color: #fff;
-    }
-    .title_info{
-        width: 60%;
-        color: #fff;
-        font-size: 0.28rem;
-    }
-    #font-big{
-        font-size: 0.28rem;
-        color: #fff;
-    }
-}
-@media screen and (max-width: 900px){
-    .qr_content{
-        z-index: 1000;
-    }
-    .download_content{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ios_content{
-        z-index: 1;
-        margin-top: 0.3rem;
-        margin-left: 0;
-    }
-    .android_content:hover.qr_content{
-        z-index: 10;
-    }
-    .android_content{
-        width: 1.4rem;
-    }
-
 }
 .mobile_download_android_content{
     box-sizing: border-box;
@@ -480,6 +524,7 @@ a:focus {
     width: 100%;
 }
 .comming_soon{
-    padding-top: 0.1rem;
     font-size: 0.12rem;
+    height: 0.2rem;
+    line-height: 0.2rem;
 }
