@@ -106,12 +106,11 @@ div.footer {
     width: 100%;
 }
 .header_logo{
-    width: 1.65rem;
-    height:0.36rem;
     padding-left: 0.2rem;
 }
 .header_logo img{
-    width: 100%;
+    width: 1.65rem;
+    height:0.36rem;
 }
 .font_container{
     min-width: 4.9rem;
