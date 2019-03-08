@@ -31,30 +31,17 @@
             <div class="content_wrap">
                 <div class="font_container">
                     <div class="title">
-                        <p id="title_first" data-i18n-text="titleFirst"></p><span class="irisnet_link"><a href="https://www.irisnet.org/" data-i18n-text="irisnet" target="_blank"></a></span><span data-i18n-text="testnetWallet"></span>
+                        <p id="title_first" data-i18n-text="titleFirst"></p>
                     </div>
-                    <p class="title_info" data-i18n-text="titleInfo"></p>
                     <div class="download_content">
-                        <div class="android_content">
-                            <div class="download_android_content">
-                                <img class="android_logo" src="resources/img/android_logo.png">
-                                <span data-i18n-text="android"></span>
-                                <img class="qr_img" src="resources/img/qr_logo.png">
-                            </div>
-                            <div class="qr_content">
-                                <img class="qr_download_img" src="env/${env}/download_android.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="ios_content">
-                            <div class="download_ios_content">
-                                <img class="ios_logo" src="resources/img/ios_logo.png">
-                                <span data-i18n-text="ios"></span>
-                                <img class="qr_img" src="resources/img/qr_logo.png">
-                            </div>
-                            <div class="ios_qr_content">
-                                <img class="ios_qr_download_img" src="env/${env}/download_ios.jpg">
-                                <p class="setting_content" data-i18n-text="iOSSetting"></p>
-                            </div>
+                        <div class="download_mainnet_wallet">
+                            <p data-i18n-text="over">公测已结束，前往</p>
+                            <p class="download_button">
+                                <span class="download_img">
+                                    <img src="resources/img/download_img.png">
+                                </span>
+                                <span data-i18n-text="downloadHrefText"></span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -89,29 +76,17 @@
                         </div>
                         <div class="mobile_link_content">
                             <p id="mobile_title_first" data-i18n-text="titleFirst"></p>
-                            <span class="irisnet_link"><a href="https://www.irisnet.org/" data-i18n-text="irisnet" target="_blank"></a></span>
-                            <span data-i18n-text="testnetWallet"></span>
                         </div>
-                        <p class="info_title_client" data-i18n-text="mobileClient"></p>
                         <div>
-                            <div class="mobile_android_content">
-                                <div class="mobile_download_android_content" onclick="window.location.href='https://d.rainbowinstaller.cn/${env}/rainbow-latest.apk'">
-                                    <img class="mobile_android_logo" src="resources/img/android_logo.png">
-                                    <span class="android" data-i18n-text="android"></span>
-                                </div>
-                                <div class="qr_content">
-                                    <img class="qr_download_img" src="env/${env}/download_android.jpg" alt="">
-                                </div>
-                            </div>
                             <div class="mobile_ios_content">
-                                <div class="mobile_download_ios_content" onclick="window.location.href='itms-services://?action=download-manifest&url=https://d.rainbowinstaller.cn/${env}/rainbow.plist'">
-                                    <img class="ios_logo" src="resources/img/ios_logo.png">
-                                    <span class="ios" data-i18n-text="ios"></span>
-                                </div>
-                                <p class="mobile_setting_content" data-i18n-text="iOSSetting"></p>
-                                <div class="ios_qr_content">
-                                    <img class="ios_qr_download_img" src="env/${env}/download_ios.jpg">
-                                    <p class="setting_content" data-i18n-text="iOSSetting"></p>
+                                <div class="download_mainnet_wallet">
+                                    <p data-i18n-text="over"></p>
+                                    <p class="mobile_download_button">
+                                <span class="mobile_download_img">
+                                    <img src="resources/img/download_img.png">
+                                </span>
+                                        <span data-i18n-text="downloadHrefText"></span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -229,6 +204,12 @@
         $(".lang_zh_btn").addClass("default-color");
         $(".lang_en_btn").addClass("change-color");
         changLang("en")
+    })
+    $('.mobile_download_button').click(function () {
+        window.open('https://www.rainbow.one/')
+    })
+    $('.download_button').click(function () {
+        window.open('https://www.rainbow.one/')
     })
 </script>
 </body>
