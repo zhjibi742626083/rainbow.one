@@ -762,6 +762,7 @@ a:focus {
     line-height: 0.35rem;
 }
 .ios_setting{
+    text-align: left;
     margin-top: 0.1rem;
     font-size: 0.14rem;
     color: rgba(155, 165, 190, 1);
@@ -791,6 +792,7 @@ a:focus {
     border-radius: 0.04rem;
 }
 .hint_text{
+    text-align: left;
     padding-top: 0.2rem;
     color: rgba(155, 165, 190, 1);
     font-size: 0.14rem;
