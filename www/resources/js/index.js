@@ -37,14 +37,14 @@ $(document).ready(function () {
         $('.mobile_android_ios_content').css('display','none');
     }
     if (isMobile) {
-        $(".illustration_container").hide();
-        $(".phone_illustration_container").show();
+        $(".illustration_container_out").hide();
+        $(".phone_illustration_container_out").show();
         $("div.pc").hide();
         $("div.phone").show();
         $("#all").show();
     } else {
-        $(".phone_illustration_container").hide();
-        $(".illustration_container").show();
+        $(".phone_illustration_container_out").hide();
+        $(".illustration_container_out").show();
         $("div.pc").show();
         $("div.phone").hide();
         $("#all").show();
@@ -177,17 +177,29 @@ $('.download_ios_btn').click(function () {
     window.open('itms-services://?action=download-manifest&url=https://rb-app.oss-cn-shanghai.aliyuncs.com/rainbow.plist')
 })
 $('.illustration_close').click(function () {
-    $('.illustration_container').hide();
+    $('.illustration_container_out').hide();
 })
 $('.phone_illustration_close').click(function () {
-    $('.phone_illustration_container').hide();
+    $('.phone_illustration_container_out').hide();
+})
+$('.phone_illustration_confirm').click(function () {
+    $('.phone_illustration_container_out').hide();
 })
 $('span[data-i18n-text="notice-link-1"]').click(function () {
-    window.open('https://mp.weixin.qq.com/s/ljG4taUvNyFzOb63ZgPd7A')
+    if(localStorage.getItem('lang') === 'zh') {
+        window.open('./protocol_zh.html')
+    }else {
+        window.open('./protocol_en.html')
+    }
 })
 $('span[data-i18n-text="notice-link-2"]').click(function () {
-    window.open('https://mp.weixin.qq.com/s/ljG4taUvNyFzOb63ZgPd7A')
+    if(localStorage.getItem('lang') === 'zh') {
+        window.open('./privacy_zh.html')
+    }else {
+        window.open('./privacy_en.html')
+    }
 })
 $('span[data-i18n-text="notice-link-3"]').click(function () {
+    
     window.open('https://mp.weixin.qq.com/s/ljG4taUvNyFzOb63ZgPd7A')
 })
