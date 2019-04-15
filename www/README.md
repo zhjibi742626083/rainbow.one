@@ -1,3 +1,2 @@
 # rainbow.one
-Home site for the Rainbow wallet
-
+Home site for the Rainbow mobile client
