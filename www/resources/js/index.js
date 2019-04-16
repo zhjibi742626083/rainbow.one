@@ -1,3 +1,28 @@
+$.fn.scrollUnique = function() { //子元素scroll父元素容器不跟随滚动JS实现
+    return $(this).each(function() {
+        var eventType = 'mousewheel';
+        // 火狐是DOMMouseScroll事件
+        if (document.mozHidden !== undefined) {
+            eventType = 'DOMMouseScroll';
+        }
+        $(this).on(eventType, function(event) {
+            // 一些数据
+            var scrollTop = this.scrollTop,
+                scrollHeight = this.scrollHeight,
+                height = this.clientHeight;
+
+            var delta = (event.originalEvent.wheelDelta) ? event.originalEvent.wheelDelta : -(event.originalEvent.detail || 0);        
+
+            if ((delta > 0 && scrollTop <= delta) || (delta < 0 && scrollHeight - height - scrollTop <= -1 * delta)) {
+                // IE浏览器下滚动会跨越边界直接影响父级滚动，因此，临界时候手动边界滚动定位
+                this.scrollTop = delta > 0? 0: scrollHeight;
+                // 向上滚 || 向下滚
+                event.preventDefault();
+            }        
+        });
+    }); 
+};
+
 $(document).ready(function () {
     var ua = navigator.userAgent;
     var lang = navigator.language || navigator.userLanguage;
@@ -200,6 +225,7 @@ $('span[data-i18n-text="notice-link-2"]').click(function () {
     }
 })
 $('span[data-i18n-text="notice-link-3"]').click(function () {
-    
     window.open('https://mp.weixin.qq.com/s/ljG4taUvNyFzOb63ZgPd7A')
 })
+
+$('.phone_illustration_scroll_content').scrollUnique();
