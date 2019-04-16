@@ -12,7 +12,7 @@ $(document).ready(function () {
         $(".mobile_download_content").removeClass("en_style");
         $('.phone_img').attr("src","resources/img/rainbow_background_phone_zh.png")
         changLang("zh");
-        localStorage.setItem('lang',lang)
+        sessionStorage.setItem('lang',lang)
     }else {
         $('.pc_phone_img').attr("src","resources/img/rainbow_background_phone_en.png")
         $(".en_lang_btn").addClass("change-color");
@@ -23,7 +23,7 @@ $(document).ready(function () {
         $(".lang_zh_btn").removeClass("change-color").addClass("default-color");
         $('.phone_img').attr("src","resources/img/rainbow_background_phone_en.png")
         changLang("en");
-        localStorage.setItem('lang',lang)
+        sessionStorage.setItem('lang',lang)
     }
     
     var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
@@ -49,6 +49,7 @@ $(document).ready(function () {
         $("div.phone").hide();
         $("#all").show();
     }
+    preventScrollParentDom.call($('.phone_illustration_container_out'));
 });
 function changLang(currnetLang){
     $.i18n.properties({
@@ -91,7 +92,7 @@ $(".zh_lang_btn").click(function () {
     $(".download_content").removeClass("en_style");
     $(".font-big").removeClass("hide-text");
     changLang("zh")
-    localStorage.setItem('lang','zh')
+    sessionStorage.setItem('lang','zh')
 });
 
 $(".en_lang_btn").click(function () {
@@ -102,7 +103,7 @@ $(".en_lang_btn").click(function () {
     $(".download_content").addClass("en_style");
     $(".font-big").addClass("hide-text");
     changLang("en")
-    localStorage.setItem('lang','en')
+    sessionStorage.setItem('lang','en')
 });
 
 $(".lang_zh_btn").click(function () {
@@ -111,7 +112,7 @@ $(".lang_zh_btn").click(function () {
     $(".lang_zh_btn").addClass("change-color");
     $(".mobile_download_content").removeClass("en_style");
     changLang("zh")
-    localStorage.setItem('lang','zh')
+    sessionStorage.setItem('lang','zh')
 });
 
 $(".lang_en_btn").click(function () {
@@ -121,17 +122,17 @@ $(".lang_en_btn").click(function () {
     $(".lang_en_btn").addClass("change-color");
     $(".mobile_download_content").addClass("en_style");
     changLang("en")
-    localStorage.setItem('lang','en')
+    sessionStorage.setItem('lang','en')
 })
 $(".telegram_link_content").click(function () {
-    if(localStorage.getItem('lang') === 'zh'){
+    if(sessionStorage.getItem('lang') === 'zh'){
         window.open('https://t.me/irisnetworkcn')
     }else {
         window.open('https://t.me/irisnetwork')
     }
 })
 $(".mobile_telegram_link_content").click(function () {
-    if(localStorage.getItem('lang') === 'zh'){
+    if(sessionStorage.getItem('lang') === 'zh'){
         window.open('https://t.me/irisnetworkcn')
     }else {
         window.open('https://t.me/irisnetwork')
@@ -186,20 +187,31 @@ $('.phone_illustration_confirm').click(function () {
     $('.phone_illustration_container_out').hide();
 })
 $('span[data-i18n-text="notice-link-1"]').click(function () {
-    if(localStorage.getItem('lang') === 'zh') {
+    if(sessionStorage.getItem('lang') === 'zh') {
         window.open('./protocol_zh.html')
     }else {
         window.open('./protocol_en.html')
     }
 })
 $('span[data-i18n-text="notice-link-2"]').click(function () {
-    if(localStorage.getItem('lang') === 'zh') {
+    if(sessionStorage.getItem('lang') === 'zh') {
         window.open('./privacy_zh.html')
     }else {
         window.open('./privacy_en.html')
     }
 })
 $('span[data-i18n-text="notice-link-3"]').click(function () {
-    
     window.open('https://mp.weixin.qq.com/s/ljG4taUvNyFzOb63ZgPd7A')
 })
+
+function preventScrollParentDom() {
+    var eventType = 'mousewheel';
+    // 火狐是DOMMouseScroll事件
+    if (document.mozHidden !== undefined) {
+        eventType = 'DOMMouseScroll';
+    }
+    this.on(eventType, function(event) {
+        event.preventDefault();    
+    });
+}
+

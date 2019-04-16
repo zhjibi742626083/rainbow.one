@@ -706,7 +706,7 @@ a:focus {
 	position: absolute;
     width: 1rem;
     bottom: 0.4rem;
-	left: -0.5rem;
+	left: -0.45rem;
     display: none;
 }
 .qr_content_img{
@@ -725,7 +725,7 @@ a:focus {
 .block{
     position: absolute;
     bottom: -0.05rem;
-    left: 0.55rem;
+    left: 0.5rem;
     width: 0.1rem;
     height: 0.1rem;
     background: #fff;
@@ -966,6 +966,9 @@ a:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.phone_illustration_scroll_content{
+	overflow-y: auto;
 }
 .phone_illustration_content_paragraph{
     margin-bottom: 0.1rem;
