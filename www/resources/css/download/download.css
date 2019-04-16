@@ -354,10 +354,10 @@ div.footer {
     width: 100%;
 }
 .footer_content{
-    height: 0.4rem;
     width: 100%;
     min-width: 9rem;
     color: #000;
+    margin-bottom: 0.18rem;
 }
 .footer_bottom_content{
     margin: 0 auto;
