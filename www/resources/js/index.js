@@ -174,9 +174,6 @@ $('.download_link_content').click(function () {
 $('.mask').on('touchmove',function(e){
     e.preventDefault();
 })
-$('.download_ios_btn').click(function () {
-    window.open('itms-services://?action=download-manifest&url=https://rb-app.oss-cn-shanghai.aliyuncs.com/rainbow.plist')
-})
 $('.illustration_close').click(function () {
     $('.illustration_container_out').hide();
 })

@@ -791,6 +791,7 @@ a:focus {
     line-height: 0.35rem;
 }
 .ios_setting{
+    margin-bottom: 0.5rem;
     text-align: left;
     margin-top: 0.1rem;
     font-size: 0.14rem;
@@ -815,10 +816,18 @@ a:focus {
     height: 0.45rem;
     background: #3598db;
     margin: 0 auto;
-    color: #fff;
     line-height: 0.45rem;
     font-size: 0.16rem;
     border-radius: 0.04rem;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
 }
 .hint_text{
     text-align: left;
@@ -840,17 +849,7 @@ a:focus {
     width: 0.4rem;
     height: 0.4rem;
 }
-.download_ios_btn{
-    margin-top: 0.5rem;
-}
-.download_ios_btn a{
-    max-width: 3rem;
-    padding: 0.11rem;
-    display: inline-block;
-    background: #3498DB;
-    color: #fff;
-    border-radius: 0.04rem;
-}
+
 .ios_link_qr_content{
     position: absolute;
     width: 1.6rem;
